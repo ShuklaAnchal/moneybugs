@@ -39,7 +39,7 @@ const navItems = [
     ],
   },
   { label: "News", href: "/news" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/contactUs" },
 ];
 
 const UpperNavbar = () => {
