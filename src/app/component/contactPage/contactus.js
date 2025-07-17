@@ -4,6 +4,9 @@ import Map from "./map"
 
 import Detailes from "@/app/component/navbar.js/detailes"
 import Social from "@/app/component/navbar.js/social"
+import { MdEmail } from "react-icons/md";
+import { FaSquarePhone } from "react-icons/fa6";
+import { IoLocationSharp } from "react-icons/io5";
 
 const contactus = () => {
   return (
@@ -19,7 +22,20 @@ const contactus = () => {
     <h1 className='text-[30px] font-bold text-black'>Get In Touch</h1>
     <p className='text-[16px] font-normal text-textsecondry w-[70%]'> Get in touch with us for expert insurance guidance and seamless support. Whether you need policy assistance, claims help, or expert consultation, our team is ready to assist you. Reach out today!</p>
 
-     <Detailes />
+     <div className="flex flex-col gap-4 text-sm text-texthearder">
+               <div className="flex items-center gap-2">
+                 <FaSquarePhone className="text-primary h-5 w-5" />
+                 888 999 0000
+               </div>
+               <div className="flex items-center gap-2">
+                 <MdEmail className="text-primary h-5 w-5" />
+                 needhelp@insur.com
+               </div>
+               <div className="flex items-start gap-2">
+                 <IoLocationSharp className="text-primary h-5 w-5" />
+                 <span>30 road, broklyn street new york 600</span>
+               </div>
+             </div>
 
  <div className='border-t-[1px] border-grey-500 mt-5'>
   <h3 className='text-[25px] font-bold text-black mt-4 mb-3'>Follow US:</h3>
