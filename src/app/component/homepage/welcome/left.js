@@ -6,17 +6,18 @@ import { MdOutlineVerifiedUser } from "react-icons/md";
 
 const left = () => {
   return (
-    <div className='w-[45%] h-[70%] flex justify-center items-center'>
+    <div className='lg:w-[45%] lg:h-[70%] w-[95%] flex justify-center items-center'>
   <div className='h-full w-full relative' >
           <Image src={WelcomeImage} alt='welcome image ' className='abolsute inset-0 h-full w-full rounded-[16px]'/>
-        <div className='bgclo relative h-[30%] w-[85%] rounded-[16px] bottom-[20%] flex justify-center items-center px-10 gap-6'>
-  <div className="relative w-[50px] h-[40px] text-white">
+        <div className='bgclo relative lg:h-[30%] h-auto lg:py-0 py-5 lg:w-[85%] w-[70%] rounded-[16px] lg:bottom-[20%] bottom-[50px] flex justify-center items-center lg:px-10 px-2 gap-6'>
+  <div className="relative lg:w-[50px] w-auto h-[40px] text-white">
     {/* Hands icon as base */}
     <FaHands className="w-[50px] h-[40px]" />
 
     {/* Verified icon positioned in center */}
     <MdOutlineVerifiedUser className="absolute top-[10%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[24px] h-[25px] rounded-full p-[2px]" />
-  </div>         <div className='text-[26px] text-white font-semibold'>We’re always here
+  </div>         
+  <div className='lg:text-[26px] text-[20px]  text-white font-semibold'>We’re always here
 to help you</div>
         </div>
   </div>

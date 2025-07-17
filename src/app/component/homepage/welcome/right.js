@@ -52,7 +52,7 @@ const CircleProgress = ({ percentage, label }) => {
 // Main Component
 const Right = () => {
   return (
-    <div className="w-[40%] h-full flex justify-center items-center">
+    <div className="lg:w-[40%] w-full h-full flex justify-center items-center">
       <div className='flex flex-col gap-4'>
         <p className="text-[16px] text-textsecondry">Welcome to Insur</p>
         <h1 className="text-[45px] font-semibold leading-[47px]">
@@ -68,7 +68,7 @@ const Right = () => {
         </p>
 
         {/* Circle Progress Items */}
-        <div className="flex gap-6 mt-6">
+        <div className="flex lg:flex-row flex-col gap-6 mt-6">
           <CircleProgress percentage={90} label="Our Claims Success Rates" />
           <CircleProgress percentage={50} label="Our Satisfied Customers" />
           <CircleProgress percentage={30} label="Save Your Money" />

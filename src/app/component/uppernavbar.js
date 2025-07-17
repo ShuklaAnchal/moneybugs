@@ -63,7 +63,7 @@ const handleCloseMenu = () => {
 };
   return (
     <div className="shadow relative z-50">
-      <div className="container">
+      <div className="lg:container px-3">
         <div className="h-[110px] flex justify-between items-center">
           {/* Logo */}
           <div className="h-[51px] w-[142px]">
@@ -134,7 +134,7 @@ const handleCloseMenu = () => {
           ></div>
 
           {/* Sidebar */}
-          <div className="absolute top-0 left-0 h-full w-[300px] bg-black text-white shadow-lg p-4 overflow-y-auto transition-transform duration-300 ease-in-out">
+          <div className="cursor-pointer absolute top-0 left-0 h-full w-[300px] bg-black text-white shadow-lg p-4 overflow-y-auto transition-transform duration-300 ease-in-out">
             {/* Header */}
             <div className="flex justify-between items-center border-b border-white/20 pb-8 mt-3">
               <div className="w-[140px]">

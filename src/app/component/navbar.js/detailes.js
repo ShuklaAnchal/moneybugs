@@ -7,13 +7,13 @@ import mapIcon from "@/icons/uppernav/map.svg";
 
 
 const upernavitems = [
-  { label: "needhelp@company.com", Icons: EmailIcon, imagalt: "EmailIcon" },
+  { label: "contact@moneybugs.in", Icons: EmailIcon, imagalt: "EmailIcon" },
   {
-    label: "30 Broklyn Golden Street. New York ",
+    label: "119 Vidya Nagar, Bhopal, Madhya Pradesh 462026",
     Icons: mapIcon,
     imagalt: "mapIcon",
   },
-  { label: "+88 ( 9800 ) 6802", Icons: PhoneIcon, imagalt: "PhoneIcon" },
+  { label: "+91 97550 40311", Icons: PhoneIcon, imagalt: "PhoneIcon" },
 ];
 
 const detailes = ({flexf, textsi}) => {

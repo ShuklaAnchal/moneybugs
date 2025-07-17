@@ -4,7 +4,7 @@ import Right from "./right"
 
 const main = () => {
   return (
-    <div className='h-screen w-full flex justify-between items-center container'>
+    <div className='lg:h-screen h-auto w-full flex lg:flex-row flex-col justify-between items-center lg:container px-3'>
       <Left />
       <Right />
     </div>

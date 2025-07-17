@@ -26,7 +26,7 @@ module.exports = {
         },
       },
       colors: {
-        primary: "#ff494A",
+        primary: "#8bc34a",
         texthearder: "#83888B",
         textsecondry: "#797979",
       },
@@ -37,3 +37,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+

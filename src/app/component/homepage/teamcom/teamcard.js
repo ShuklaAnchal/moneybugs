@@ -9,7 +9,7 @@ const cardData = [
 
 const TeamCard = () => {
   return (
-    <div className='flex flex-row gap-10 flex-wrap justify-between px-3'>
+    <div className='flex flex-row gap-10 flex-wrap lg:justify-between justify-center px-3'>
       {cardData.map((item, index) => (
         <div key={index} className='w-[316px] h-[426px] bg-red-500 mb-5 rounded-[110px] relative overflow-hidden'>
           <img src={item.cardimg} alt='bg image' className='absolute z-0 h-full w-full inset-0 object-cover' />

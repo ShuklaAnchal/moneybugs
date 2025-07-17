@@ -20,7 +20,7 @@ import Footer from "@/app/component/footer"
 const MaindashboardPage = () => {
   return (
     <div>
-      <div className="relative h-[110vh] w-full overflow-hidden">
+      <div className="relative lg:h-[110vh] h-auto w-full overflow-hidden">
       {/* Background Image */}
       <Image
         src={BackgroundImage}

@@ -4,7 +4,7 @@ import Rightcom from "./opportunitycomponents.js/rightcom";
 
 const opportunity = () => {
   return (
-    <div className="w-full h-[90vh] bg-primary flex ">
+    <div className="w-full lg:h-[90vh] h-auto bg-primary flex lg:flex-row flex-col">
       <Leftcom />
       <Rightcom />
     </div>

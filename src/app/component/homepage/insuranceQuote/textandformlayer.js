@@ -39,18 +39,18 @@ const InsuranceQuote = () => {
   const current = insuranceOptions.find(option => option.id === selected);
 
   return (
-    <div className='flex flex-row justify-center items-center min-h-screen'>
+    <div className='flex lg:flex-row flex-col justify-center items-center h-auto mt-16 '>
 
       {/* Left + Center Section Combined */}
-      <div className='w-[60%] flex flex-col gap-10'>
+      <div className='lg:w-[60%] w-full flex flex-col lg:gap-10 gap-3'>
     <div>
-          <p className='text-[16px] text-textsecondry'>Get a Free Quote</p>
-     <h1 className='text-[45px] font-bold w-[80%] leading-[43px]'>Get an Insurance Quote
+          <p className='text-[16px] text-textsecondry mb-4'>Get a Free Quote</p>
+     <h1 className='lg:text-[45px] text-[30px] font-bold w-[80%] leading-[43px]'>Get an Insurance Quote
 to Get Started</h1>
     </div>
-   <div className='flex flex-row w-full'>
+   <div className='flex lg:flex-row flex-col w-full lg:mt-0 mt-4'>
          {/* Left Navigation */}
-       <div className='flex flex-col gap-4 w-[310px]'>
+       <div className='flex flex-col gap-4 lg:w-[310px] w-full'>
   {insuranceOptions.map(option => {
     const isSelected = selected === option.id;
     
@@ -76,11 +76,11 @@ to Get Started</h1>
 </div>
 
         {/* Center Description */}
-        <div className='w-full md:w-2/3 px-4 md:px-12'>
-          <h2 className='text-[30px] font-semibold mb-4'>{current.title}</h2>
-          <p className='text-textsecondry mb-6 '>{current.desc}</p>
+        <div className='w-full md:w-2/3 px-4 md:px-12 lg:mt-0 mt-4'>
+          <h2 className='text-[30px] font-semibold lg:mb-4 mb-1'>{current.title}</h2>
+          <p className='text-textsecondry lg:mb-6 mb-2'>{current.desc}</p>
 
-          <div className='flex items-center gap-3 mt-6 border-t-[1px] border-textsecondry pt-10'>
+          <div className='flex items-center gap-3 mt-6 border-t-[1px] border-textsecondry lg:pt-10 pt-2'>
             <div className='w-[54px] h-[54px] rounded-full bg-primary flex items-center justify-center'>
              <FaPhoneAlt className='text-white text-[22px]' />
             </div>
@@ -95,7 +95,7 @@ to Get Started</h1>
       </div>
 
       {/* Right Form */}
-      <div className='w-[40%]'>
+      <div className='lg:w-[40%] w-full lg:mt-0 lg:mt-5 mt-8'>
         <form className='flex flex-col gap-4'>
           <input
             type='text'
@@ -121,7 +121,7 @@ to Get Started</h1>
 
           <button
             type='submit'
-            className='bg-red-500 w-[50%] text-white py-4 mt-4 rounded-full font-semibold hover:bg-red-600 transition-all duration-300'
+            className='bg-primary w-[50%] text-white py-4 mt-4 rounded-full font-semibold hover:bg-red-600 transition-all duration-300'
           >
             GET A QUOTE NOW
           </button>

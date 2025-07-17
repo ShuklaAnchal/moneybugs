@@ -19,3 +19,21 @@
 .bgclo {
   background: linear-gradient(to bottom, #232326, #ff494A);
 }
+
+  .custom-swiper .swiper-pagination {
+    top: 300px !important; /* You can change to 'top: 10px;' or custom positioning */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* or 'flex-start', 'flex-end' etc. */
+    align-items: center;
+  }
+
+  .custom-swiper .swiper-pagination-bullet {
+    background: blue; /* Custom color */
+    opacity: 1;
+  }
+
+  .custom-swiper .swiper-pagination-bullet-active {
+    background: #000000;
+  }

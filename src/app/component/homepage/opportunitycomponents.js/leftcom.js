@@ -1,21 +1,25 @@
 import React from "react";
 import Discoverbtn from "../button/discoverbtn";
 
-const leftcom = () => {
+const LeftCom = () => {
   return (
-    <div className="w-[50%] flex flex-col justify-center gap-4 h-full bg-primary text-[16px] text-[#FFE1E1] pl-[10rem]">
-      <p className="">Why Choose Us</p>
-      <h1 className="text-[45px] text-white font-semibold leading-[50px] pr-10">
+    <div className="w-full lg:w-1/2 flex flex-col justify-center gap-4 h-full bg-primary text-[16px] text-[#FFE1E1] px-4 sm:px-6 lg:px-24 py-10 lg:py-0">
+      <p className="mt-2 lg:mt-0 text-sm sm:text-base">Why Choose Us</p>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] text-white font-semibold leading-snug sm:leading-snug lg:leading-[50px]">
         We Create Opportunity to Reach Our All the Customers
       </h1>
-      <p className="pr-20">
+      <p className="text-sm sm:text-base text-[#FFE1E1] max-w-xl">
         There are many variations of passages of Lorem Ipsum available, but the
         majority have suffered alteration in some form, by injected humour, or
         randomised words.
       </p>
-      <Discoverbtn bgcolor={"bg-black"} hovercolor={"hover:bg-[#FFE1E1]"} btntext={"hover:text-primary"} />
+      <Discoverbtn
+        bgcolor={"bg-black"}
+        hovercolor={"hover:bg-[#FFE1E1]"}
+        btntext={"hover:text-primary"}
+      />
     </div>
   );
 };
 
-export default leftcom;
+export default LeftCom;

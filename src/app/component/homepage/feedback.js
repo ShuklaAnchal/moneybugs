@@ -46,7 +46,7 @@ const Feedback = () => {
       />
 
       {/* Content */}
-      <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:bg-transparent md:bg-transparent sm:bg-[#f3f3f3]">
         <p className="text-[16px] text-textsecondry">Our Feedbacks</p>
         <h1 className="text-[30px] md:text-[38px] lg:text-[45px] font-semibold mb-12">
           What They’re Talking?
