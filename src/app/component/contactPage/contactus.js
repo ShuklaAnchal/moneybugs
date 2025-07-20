@@ -1,88 +1,78 @@
-import React from 'react'
-import Uppernavbar from "@/app/component/uppernavbar";
-import Map from "./map"
+import React from 'react';
+import Map from './map';
+import Social from '@/app/component/navbar.js/social';
+import Claimcard from '../claimcard';
+import ContactForm from './contactForm'
 
-import Detailes from "@/app/component/navbar.js/detailes"
-import Social from "@/app/component/navbar.js/social"
-import { MdEmail } from "react-icons/md";
-import { FaSquarePhone } from "react-icons/fa6";
-import { IoLocationSharp } from "react-icons/io5";
+import { MdEmail } from 'react-icons/md';
+import { FaSquarePhone } from 'react-icons/fa6';
+import { IoLocationSharp } from 'react-icons/io5';
 
-const contactus = () => {
+const ContactUs = () => {
   return (
-  <div className='flex flex-col bg-[#F3F3F3]'>
-      <div className='h-[40vh] w-full flex flex-col justify-center items-center bg-[#F3F3F3]'>
-     <h1 className='text-[45px] font-bold text-black' >Contact Us</h1>
-     <p className='text-[16px] font-normal text-textsecondry w-[40%] text-center'> Get in touch with us for expert insurance guidance and seamless support. Whether you need policy assistance, claims help, or expert consultation, our team is ready to assist you. Reach out today!
-     </p>
+    <div className="flex flex-col bg-[url('https://theme9.nisharindia.in/assets/images/update-10-02-2023/shapes/testimonial-five-shape-1.png')] bg-no-repeat bg-cover bg-center">
+      {/* Hero Section */}
+      <div className="min-h-[40vh] w-full flex flex-col justify-center items-center px-4 text-center">
+        <h1 className="text-[32px] md:text-[40px] lg:text-[45px] font-bold text-primary">
+          Contact Us
+        </h1>
+        <p className="text-[14px] md:text-[16px] text-textsecondry max-w-3xl mt-3">
+          Get in touch with us for expert insurance guidance and seamless support. Whether you need policy assistance, claims help, or expert consultation, our team is ready to assist you. Reach out today!
+        </p>
+      </div>
+
+      {/* Contact Info + Form */}
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:container md:container mx-auto px-3 py-10 gap-10">
+        {/* Left Side - Contact Info */}
+        <div className="flex flex-col w-full lg:w-1/2 gap-5">
+          <h2 className="text-[24px] md:text-[30px] font-bold text-black">
+            Get In Touch
+          </h2>
+          <p className="text-[14px] md:text-[16px] text-textsecondry max-w-xl">
+            Get in touch with us for expert insurance guidance and seamless support. Whether you need policy assistance, claims help, or expert consultation, our team is ready to assist you. Reach out today!
+          </p>
+
+          <div className="flex flex-col gap-4 text-sm text-texthearder">
+            <div className="flex items-center gap-2">
+              <FaSquarePhone className="text-primary h-5 w-5" />
+              888 999 0000
+            </div>
+            <div className="flex items-center gap-2">
+              <MdEmail className="text-primary h-5 w-5" />
+              needhelp@insur.com
+            </div>
+            <div className="flex items-start gap-2">
+              <IoLocationSharp className="text-primary h-5 w-5 mt-1" />
+              <span>30 road, Broklyn Street, New York 600</span>
+            </div>
+          </div>
+
+          {/* Social Media */}
+          <div className="border-t border-gray-300 pt-5">
+            <h3 className="text-[20px] md:text-[25px] font-bold text-black mb-3">
+              Follow Us:
+            </h3>
+            <Social iconcolor="text-primary" />
+          </div>
+        </div>
+
+        {/* Right Side - Form */}
+        <div className="px-4">
+        <ContactForm />
+        </div>
+      </div>
+
+      {/* Map Section */}
+      <div className="w-full flex justify-center items-center mb-16 px-4">
+        <Map />
+      </div>
+
+      {/* Claim Cards */}
+      <div className="px-3">
+        <Claimcard />
+      </div>
     </div>
+  );
+};
 
-   <div className='flex w-full justify-between items-center container py-10 gap-8'>
-    <div className='flex flex-col w-[40%] text-start gap-4'>
-    <h1 className='text-[30px] font-bold text-black'>Get In Touch</h1>
-    <p className='text-[16px] font-normal text-textsecondry w-[70%]'> Get in touch with us for expert insurance guidance and seamless support. Whether you need policy assistance, claims help, or expert consultation, our team is ready to assist you. Reach out today!</p>
-
-     <div className="flex flex-col gap-4 text-sm text-texthearder">
-               <div className="flex items-center gap-2">
-                 <FaSquarePhone className="text-primary h-5 w-5" />
-                 888 999 0000
-               </div>
-               <div className="flex items-center gap-2">
-                 <MdEmail className="text-primary h-5 w-5" />
-                 needhelp@insur.com
-               </div>
-               <div className="flex items-start gap-2">
-                 <IoLocationSharp className="text-primary h-5 w-5" />
-                 <span>30 road, broklyn street new york 600</span>
-               </div>
-             </div>
-
- <div className='border-t-[1px] border-grey-500 mt-5'>
-  <h3 className='text-[25px] font-bold text-black mt-4 mb-3'>Follow US:</h3>
-    <Social />
- </div>
-   
-    </div>
-  <div className="w-full lg:w-[40%] bg-white rounded-2xl shadow-md px-6 py-8">
-  <h2 className="text-[24px] font-bold text-black mb-6">Send a Message</h2>
-
-  <form className="flex flex-col gap-4">
-    <input
-      type="text"
-      placeholder="Name"
-      className="border-b border-gray-300 outline-none py-2 placeholder:text-gray-400"
-    />
-    <input
-      type="email"
-      placeholder="E-mail address"
-      className="border-b border-gray-300 outline-none py-2 placeholder:text-gray-400"
-    />
-    <textarea
-      placeholder="Message"
-      rows="4"
-      className="border-b border-gray-300 outline-none py-2 placeholder:text-gray-400 resize-none"
-    ></textarea>
-
-    <p className="text-xs text-gray-400 mt-2">
-      By Submitting, you agree to the processing of your personal data by Subx as described in the Privacy Statement.
-    </p>
-
-    <button
-      type="submit"
-      className="mt-4 self-end bg-[#FF6A00] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition"
-    >
-      Submit
-    </button>
-  </form>
-</div>
-
-    </div> 
-
-<div className='w-full flex justify-center items-center mb-16'>
-      <Map />
-</div>
-  </div>
-  )
-}
-
-export default contactus
+export default ContactUs;

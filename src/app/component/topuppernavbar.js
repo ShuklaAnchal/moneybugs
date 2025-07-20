@@ -13,7 +13,7 @@ const uppernavbar = () => {
 
 <Detailes flexf={"flex-row"} textsi={"text-[12px]"} />
 
-<Social />
+<Social iconcolor={"text-white"} />
       </div>
 </div>
       </div>

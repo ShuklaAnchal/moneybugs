@@ -1,35 +1,28 @@
 import React from 'react'
-import Image from 'next/image';
-import Link from 'next/link';
+import Link from 'next/link'
 
-import Pintrest from "@/icons/uppernav/pinterest.svg";
-import Facebook from "@/icons/uppernav/facebook.svg";
-import Twitter from "@/icons/uppernav/twitter.svg";
-import Instagram from "@/icons/uppernav/instagram.svg";
-import Detailes from "@/app/component/navbar.js/detailes"
+import { FaTwitter, FaFacebook, FaInstagram, FaPinterest } from "react-icons/fa6"
 
-
-
-const SocialIcon =[
-  {Icon: Twitter  , imagalt:"Twitter", link:"/"},
-  {Icon: Facebook , imagalt:"Facebook", link:"/"},
-  {Icon: Pintrest , imagalt:"Pintrest", link:"/"},
-  {Icon: Instagram , imagalt:"Instagram", link:"/"}
+const socialIcons = [
+  { Icon: FaTwitter, alt: "Twitter", link: "/" },
+  { Icon: FaFacebook, alt: "Facebook", link: "/" },
+  { Icon: FaInstagram, alt: "Instagram", link: "/" },
+  { Icon: FaPinterest, alt: "Pinterest", link: "/" }
 ]
 
-const social = () => {
+const Social = ({iconcolor}) => {
   return (
-  <div className="flex gap-6">
-    {SocialIcon.map((item, ind) => (
-    <div key={ind}>
-     <Link  href={item.link}>
-     <Image src={item.Icon}  alt={item.imagalt}  className="w-5 h-5" />
-     </Link>
+    <div className="flex gap-6">
+      {socialIcons.map((item, index) => {
+        const IconComponent = item.Icon
+        return (
+          <Link key={index} href={item.link} aria-label={item.alt}>
+            <IconComponent className={`w-5 h-5 ${iconcolor} hover:text-blue-600 transition`} />
+          </Link>
+        )
+      })}
     </div>
-    ))
-    }
-  </div>
   )
 }
 
-export default social
+export default Social

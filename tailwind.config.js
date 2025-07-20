@@ -26,9 +26,10 @@ module.exports = {
         },
       },
       colors: {
-        primary: "#8bc34a",
+        primary: "#FF494A",
         texthearder: "#83888B",
         textsecondry: "#797979",
+        bgbluecolor:"#262E8B"
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

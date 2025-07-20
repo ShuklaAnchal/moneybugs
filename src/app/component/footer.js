@@ -15,9 +15,8 @@ const Footer = () => {
         {/* Logo + Text + Button */}
         <div className="flex flex-col gap-6 max-w-sm">
           <Image src={Logo} alt="Logo" />
-          <p className="text-sm text-texthearder">
-            Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt
-            qui esse pariatur duis deserunt.
+          <p className="text-sm text-texthearder w-[75%]">
+            MoneyBugs is a one-stop that offer customers a wide range of Risk management and Investment solution products under one roof.
           </p>
           <button className="bg-primary w-44 py-3 rounded-full text-white text-sm font-semibold hover:bg-white hover:text-primary transition">
             GET A QUOTE
@@ -75,11 +74,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
+      <div className="w-full flex lg:flex-row md:flex-row flex-col text-textsecondry lg:gap-14 md:gap-12 gap-2 font-bold justify-center mt-12">
+       <Link href="/privacy-policy" > <h1>Privacy Policy</h1></Link>
+       <Link href="/disclaimer" > <h1>Disclaimer</h1></Link>
+       <Link href="/terms-and-conditions" > <h1>Terms & Conditions</h1></Link>
+      </div>
       {/* Bottom Footer */}
-      <div className="mt-12 pt-6 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-texthearder">
+      <div className="pt-6 mt-4 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-texthearder">
         <div>© All Copyright MoneyBugs</div>
-        <Social />
+        <Social 
+          iconcolor={"text-white"}
+        />
       </div>
     </div>
   );

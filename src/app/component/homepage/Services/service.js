@@ -2,7 +2,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { FaCar, FaHome, FaHeartbeat, FaNotesMedical } from "react-icons/fa";
+import { FaCar, FaHome, FaHeartbeat, FaNotesMedical , FaHandHoldingMedical, FaPlaneDeparture, FaBuilding, FaIndustry , FaUmbrellaBeach } from "react-icons/fa";
+import { RiFundsFill } from "react-icons/ri";
+
 import Image from "next/image";
 import ServiceImage from "@/icons/companylogo/services-5-4.jpg";
 import autoprefixer from "autoprefixer";
@@ -12,56 +14,56 @@ const insuranceData = [
   {
     title: "HEALTH INSURANCE",
     image: ServiceImage,
-    icon: <FaCar />,
+    icon: <FaHeartbeat />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
     title: "MOTOR INSURANCE",
     image: ServiceImage,
-    icon: <FaHeartbeat />,
+    icon: <FaCar />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
     title: "LIFE INSURANCE",
     image: ServiceImage,
-    icon: <FaHome />,
+    icon: <FaHandHoldingMedical />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
     title: "TRAVAL INSURANCE",
     image: ServiceImage,
-    icon: <FaNotesMedical />,
+    icon: <FaPlaneDeparture  />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
     title: "MUTUAL FUND /SIP",
     image: ServiceImage,
-    icon: <FaNotesMedical />,
+    icon: <RiFundsFill />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
     title: "PROPERTY INSURANCE",
     image: ServiceImage,
-    icon: <FaNotesMedical />,
+    icon: <FaBuilding />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
     title: "BUSSINESS INSURANCE",
     image: ServiceImage,
-    icon: <FaNotesMedical />,
+    icon: <FaIndustry />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
     title: "CORPORATE INSURANCE",
     image: ServiceImage,
-    icon: <FaNotesMedical />,
+    icon: <FaUmbrellaBeach  />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
