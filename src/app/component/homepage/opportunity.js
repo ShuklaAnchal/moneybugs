@@ -1,6 +1,7 @@
 import React from "react";
 import Leftcom from "./opportunitycomponents.js/leftcom";
 import Rightcom from "./opportunitycomponents.js/rightcom";
+import Health from "@/icons/health/health-insurance.jpg"
 import { FaHandSparkles } from "react-icons/fa";
 import { GiNotebook, GiTakeMyMoney } from "react-icons/gi";
 
@@ -38,7 +39,7 @@ const cardItems = [
 />
       <Rightcom 
       cardData={cardItems}
-  backgroundImage="https://theme9.nisharindia.in/assets/images/update-10-02-2023/blog/news-5-1.jpg"
+  backgroundImage={Health}
   />
     </div>
   );

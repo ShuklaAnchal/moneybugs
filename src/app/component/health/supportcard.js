@@ -4,7 +4,7 @@ import React from "react";
 // Reusable SupportCard component
 const SupportCard = ({ cards = [] }) => {
   return (
-    <div className="lg:container md:container mx-auto px-5 mb-16 flex flex-col items-center">
+    <div className="lg:container md:container mx-auto px-5 mb-16 mt-5 flex flex-col items-center">
         <h3 className="text-[20px] text-primary">Health Insurance Near Me</h3>
         <h1 className="text-[30px] font-semibold">Bhopal's Leading Health Insurance Consulting Firm</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-7">

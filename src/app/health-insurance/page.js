@@ -5,6 +5,7 @@ import Uppernavbar from "@/app/component/uppernavbar";
 import Footer from "@/app/component/footer";
 import Uppepart from "@/app/component/health/upperpart";
 import WelcomeImage from "@/icons/main/welcome.jpg";
+import Health from "@/icons/health/health-insurance.jpg"
 import Leftcom from "@/app/component/homepage/opportunitycomponents.js/leftcom";
 import Rightcom from "@/app/component/homepage/opportunitycomponents.js/rightcom";
 import { MdSupportAgent } from "react-icons/md";
@@ -16,19 +17,23 @@ import SupportCard from "@/app/component/health/supportcard";
 import SuccessSection from "../component/health/sucesssection";
 import ConfusionSection from "@/app/component/health/ConfusionSection";
 
+import imge1 from "@/icons/health/image-1.svg"
+import imge2 from "@/icons/health/image-2.svg"
+import imge3 from "@/icons/health/image-3.svg"
+
 const page = () => {
   const benefits = [
     {
       label: "Individual Health Insurance",
-      icon: "/icons/individual.png",
+      icon: imge1,
     },
     {
       label: "Family Health Insurance",
-      icon: "/icons/family.png",
+      icon: imge2,
     },
     {
       label: "Senior Citizen Plan",
-      icon: "/icons/senior.png",
+      icon: imge3,
     },
   ];
 
@@ -96,7 +101,7 @@ const paragraphs = [
         quotes={quotes}
       />
 
-      <div className="w-full lg:h-[90vh] h-auto bg-primary flex lg:flex-row flex-col mt-12">
+      <div className="w-full lg:h-[90vh] h-auto bg-primary flex lg:flex-row flex-col py-10 px-3">
         <Leftcom
           subtitle="Why Choose Money Bugs"
           heading="Bhopal's Leading Health Insurance Consultant"
@@ -108,7 +113,7 @@ const paragraphs = [
 
         <Rightcom
           // cardData={cardItems}
-          backgroundImage="https://theme9.nisharindia.in/assets/images/update-10-02-2023/blog/news-5-1.jpg"
+          backgroundImage={Health}
         />
       </div>
 <div className="mt-7">

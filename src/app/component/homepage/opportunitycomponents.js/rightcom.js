@@ -1,18 +1,20 @@
 "use client";
 import React from "react";
+import Image from "next/image";
+
 
 const RightCom = ({
   cardData = [],
-  backgroundImage = "https://theme9.nisharindia.in/assets/images/update-10-02-2023/blog/news-5-1.jpg",
+  backgroundImage,
   className = "",
 }) => {
   return (
     <div className={`relative w-full md:w-1/2 h-full bg-primary ${className}`}>
       {/* Background image (only on md and up) */}
-      <img
+      <Image
         src={backgroundImage}
         alt="background"
-        className="absolute h-full w-full inset-0 z-0 object-cover hidden md:block"
+        className="absolute h-full w-full inset-0 z-0 object-fill hidden md:block"
       />
 
       {/* Card Content */}

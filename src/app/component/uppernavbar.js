@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -24,8 +24,8 @@ const navItems = [
       { label: "Health Insurance", href: "/health-insurance" },
       { label: "Motor Insurance", href: "/motor-insurance" },
       { label: "Term Insurance", href: "/term-insurance" },
-      { label: "SIP and Mutual Fund", href: "/sip-and-mutual-fund"},
-      { label: "Traval Insurance", href: "/traval-insurance" },
+      { label: "SIP and Mutual Fund", href: "/sip-and-mutual-fund" },
+      { label: "Traval Insurance", href: "/travel-insurance" },
       { label: "Child Saving Plan", href: "/child-saving-plan" },
     ],
   },
@@ -51,8 +51,21 @@ const UpperNavbar = () => {
     setTimeout(() => setIsMobileMenuOpen(false), 200);
   };
 
+    useEffect(() => {
+  if (isMobileMenuOpen) {
+    document.body.classList.add("overflow-hidden");
+  } else {
+    document.body.classList.remove("overflow-hidden");
+  }
+
+  // Clean up on unmount
+  return () => {
+    document.body.classList.remove("overflow-hidden");
+  };
+}, [isMobileMenuOpen]);
+
   return (
-    <div className="shadow relative z-50">
+    <div className="shadow relative z-[9999]">
       <div className="lg:container px-3">
         <div className="h-[110px] flex justify-between items-center">
           {/* Logo */}
@@ -72,7 +85,7 @@ const UpperNavbar = () => {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 {item.href ? (
-                  <Link href={item.href} className="cursor-pointer">
+                  <Link href={item.href} className="cursor-pointer ">
                     {item.label}
                   </Link>
                 ) : (
@@ -109,7 +122,7 @@ const UpperNavbar = () => {
           {/* Right Buttons (hidden on small screens) */}
           <div className="hidden md:flex gap-2 items-center">
             <div className="h-10 w-10 flex items-center justify-center">
-             <IoSearchOutline />
+              <IoSearchOutline />
             </div>
             <button className="bg-primary px-[40px] py-[16px] rounded-full text-white text-[13px] font-semibold hover:bg-black transition">
               GET A QUOTE
@@ -171,23 +184,21 @@ const UpperNavbar = () => {
                       </div>
 
                       {/* Dropdown Items */}
-                      {item.dropdown && isOpen && (
-                        <div
-                          className="absolute top-full left-0 mt-2 w-52 bg-red-600 border border-red-700 rounded-md shadow-md z-50"
-                          onMouseEnter={() => setHoveredIndex(index)}
-                          onMouseLeave={() => setHoveredIndex(null)}
-                        >
-                          {item.dropdown.map((subItem, subIndex) => (
-                            <Link
-                              key={subIndex}
-                              href={subItem.href}
-                              className="block px-4 py-3 text-sm text-white hover:bg-red-700"
-                            >
-                              {subItem.label}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
+                   {item.dropdown && openDropdownIndex === index && (
+  <div className="ml-4 mt-2 pl-2 border-l border-white/10 flex flex-col gap-2">
+    {item.dropdown.map((subItem, subIndex) => (
+      <Link
+        key={subIndex}
+        href={subItem.href}
+        onClick={handleCloseMenu}
+        className="py-2 text-sm text-white hover:text-primary transition"
+      >
+        {subItem.label}
+      </Link>
+    ))}
+  </div>
+)}
+
                     </div>
                   )}
                 </div>
@@ -204,7 +215,7 @@ const UpperNavbar = () => {
                   666 888 0000
                 </p>
                 <div className="flex gap-4 mt-3">
-                  <Social iconcolor={"text-white"}  />
+                  <Social iconcolor={"text-white"} />
                 </div>
               </div>
             </div>

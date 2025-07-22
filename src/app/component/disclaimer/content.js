@@ -4,6 +4,7 @@ const content = () => {
   return (
     <div>
           <div className="px-8 py-10 bg-white text-[#7A7A7A] leading-relaxed max-w-4xl mx-auto">
+              <h1 className="text-2xl font-bold text-blue-800 mb-6">Disclaimer of Money Bugs</h1>
       <p className="mb-6">
         The information provided by <strong>Money Bugs</strong> is for general informational and educational purposes only. While we strive to ensure accuracy and reliability, we do not guarantee the completeness, suitability, or validity of any information.
       </p>

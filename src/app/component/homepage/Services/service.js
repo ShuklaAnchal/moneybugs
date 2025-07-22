@@ -2,12 +2,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { FaCar, FaHome, FaHeartbeat, FaNotesMedical , FaHandHoldingMedical, FaPlaneDeparture, FaBuilding, FaIndustry , FaUmbrellaBeach } from "react-icons/fa";
+import { FaCar, FaHeartbeat, FaNotesMedical , FaHandHoldingMedical, FaPlaneDeparture, FaBuilding, FaIndustry , FaUmbrellaBeach } from "react-icons/fa";
 import { RiFundsFill } from "react-icons/ri";
 
 import Image from "next/image";
 import ServiceImage from "@/icons/companylogo/services-5-4.jpg";
-import autoprefixer from "autoprefixer";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 
 const insuranceData = [
@@ -72,7 +71,7 @@ const insuranceData = [
 const service = () => {
   return (
     <div className="h-[90vh] w-full flex justify-center relative ">
-      <div className="lg:h-[80vh] h-auto lg:w-[90%] w-full absolute lg:top-[-20%] top-[0] z-30 ">
+      <div className="lg:h-[80vh] h-auto lg:w-[90%] w-full absolute lg:top-[-20%] top-[0] z-[20] ">
         <div className="w-full h-[70%] bg-white lg:shadow shadow-none rounded-[16px] flex flex-col text-center ">
           <div className="flex flex-col leading-[45px] mt-14">
             <p className="text-[16px] text-textsecondry">Our Top Services</p>
@@ -83,7 +82,7 @@ const service = () => {
               Services Fields
             </h2>
           </div>
-          <div className="lg:px-[6rem] px-3 lg:mt-[90px] mt-[30px] lg:mb-0 mb-[20px] z-50">
+          <div className="lg:px-[6rem] px-3 lg:mt-[90px] mt-[30px] lg:mb-0 mb-[20px] z-[50]">
             <Swiper
               className="overflow-y-auto h-80"
               modules={[Pagination, Autoplay, EffectCoverflow]}
@@ -106,7 +105,7 @@ const service = () => {
                     />
 
                     {/* Default Bottom Panel */}
-                    <div className="z-50 bg-white absolute left-1/2 transform -translate-x-1/2 bottom-[-9px] w-[76%] rounded-lg py-2 flex flex-col items-center shadow group-hover:opacity-0 transition duration-300">
+                    <div className="z-[50] bg-white absolute left-1/2 transform -translate-x-1/2 bottom-[-9px] w-[76%] rounded-lg py-2 flex flex-col items-center shadow group-hover:opacity-0 transition duration-300">
                       <div className="w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center text-xl relative bottom-[62%]">
                         {item.icon}
                       </div>

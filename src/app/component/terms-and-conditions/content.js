@@ -3,6 +3,7 @@ import React from 'react';
 const TermsConditions = () => {
   return (
     <div className="px-8 py-10 bg-white text-gray-800 max-w-4xl mx-auto leading-relaxed">
+        <h1 className="text-2xl font-bold text-blue-800 mb-6">Terms and Condition of Money Bugs</h1>
       <p className="mb-4 font-semibold">Effective Date: [15/02/2025]</p>
 
       <h2 className="text-[16px] font-bold mb-2">1. Introduction</h2>
