@@ -5,20 +5,20 @@ import Image from "next/image";
 
 const RightCom = ({
   cardData = [],
+  paddings,
   backgroundImage,
-  className = "",
 }) => {
   return (
-    <div className={`relative w-full md:w-1/2 h-full bg-primary ${className}`}>
+    <div className={`relative w-full md:w-1/2 h-full bg-primary`}>
       {/* Background image (only on md and up) */}
       <Image
         src={backgroundImage}
         alt="background"
-        className="absolute h-full w-full inset-0 z-0 object-fill hidden md:block"
+        className={`absolute h-full w-full inset-0 z-0 object-fill hidden md:block ${paddings}`}
       />
 
       {/* Card Content */}
-      <div className="relative z-10 flex flex-col justify-center items-center gap-6 px-4 sm:px-6 md:px-10 py-10 md:py-16">
+      <div className="relative h-full z-10 flex flex-col justify-center items-center gap-6 px-4 sm:px-6 md:px-10 py-10 md:py-16">
         {cardData.map((item, index) => (
           <div
             key={index}

@@ -16,7 +16,7 @@ const navItems = [
   { label: "Home", href: "/" },
   {
     label: "About Us",
-    href: "/About-us",
+    href: "/about-us",
   },
   {
     label: "Insurance",

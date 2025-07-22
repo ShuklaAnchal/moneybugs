@@ -1,9 +1,10 @@
 import React from "react";
 import Leftcom from "./opportunitycomponents.js/leftcom";
 import Rightcom from "./opportunitycomponents.js/rightcom";
-import Health from "@/icons/health/health-insurance.jpg"
+import BackgroundImage from "@/icons/main/oppbg.jpg"
 import { FaHandSparkles } from "react-icons/fa";
 import { GiNotebook, GiTakeMyMoney } from "react-icons/gi";
+
 
 const opportunity = () => {
 
@@ -27,6 +28,7 @@ const cardItems = [
     para: "There are many not of age of rm available the majority.",
   },
 ];
+
   return (
     <div className="w-full lg:h-[90vh] h-auto bg-primary flex lg:flex-row flex-col">
      <Leftcom
@@ -39,7 +41,8 @@ const cardItems = [
 />
       <Rightcom 
       cardData={cardItems}
-  backgroundImage={Health}
+      paddings={"p-0"}
+  backgroundImage={BackgroundImage}
   />
     </div>
   );

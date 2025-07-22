@@ -2,17 +2,16 @@ import React from "react";
 import Discoverbtn from "../button/discoverbtn";
 
 const LeftCom = ({
-  subtitle = "Why Choose Us",
-  heading = "We Create Opportunity to Reach Our All the Customers",
-  description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-  buttonBgColor = "bg-black",
+  subtitle,
+  heading ,
+  description,
+  buttonBgColor ,
   buttonHoverColor = "hover:bg-[#FFE1E1]",
   buttonTextColor = "hover:text-primary",
-  className = "",
 }) => {
   return (
     <div
-      className={`w-full lg:w-1/2 flex flex-col justify-center gap-4 h-full bg-primary text-[16px] text-[#FFE1E1] px-4 sm:px-6 lg:px-24 py-10 lg:py-0 ${className}`}
+      className={`w-full lg:w-1/2 flex flex-col justify-center gap-4 h-full text-[16px] text-[#FFE1E1] px-4 sm:px-6 lg:px-24 py-10 lg:py-0`}
     >
       <p className="mt-2 lg:mt-0 text-sm sm:text-base">{subtitle}</p>
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] text-white font-semibold leading-snug sm:leading-snug lg:leading-[50px]">

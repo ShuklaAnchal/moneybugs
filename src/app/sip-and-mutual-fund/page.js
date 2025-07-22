@@ -17,19 +17,23 @@ import SupportCard from "@/app/component/health/supportcard";
 import SuccessSection from "../component/health/sucesssection";
 import ConfusionSection from "@/app/component/health/ConfusionSection";
 
+import imge1 from "@/icons/health/image-1.svg"
+import imge2 from "@/icons/health/image-2.svg"
+import imge3 from "@/icons/health/image-3.svg"
+
 const page = () => {
   const benefits = [
     {
       label: "Individual Health Insurance",
-      icon: "/icons/individual.png",
+      icon: imge1,
     },
     {
       label: "Family Health Insurance",
-      icon: "/icons/family.png",
+      icon: imge2,
     },
     {
       label: "Senior Citizen Plan",
-      icon: "/icons/senior.png",
+      icon: imge3,
     },
   ];
 
@@ -110,12 +114,17 @@ const paragraphs = [
         <Rightcom
           // cardData={cardItems}
           backgroundImage={Health}
+          paddings={"p-6"}
         />
       </div>
 <div className="mt-7">
 
-  <SupportCard cards={cardData} />
-  <SuccessSection   tagline="YOUR PATH TO SUCCESS"
+  <SupportCard 
+  heading="Money Bugs : SIP & Mutual Funds Investment Plans"
+  subheading="We Offer a Whole Range of Investment Plans"
+  cards={cardData} />
+  <SuccessSection   
+  tagline="YOUR PATH TO SUCCESS"
   heading="Success Defined in a Different Way"
   paragraphs={paragraphs}
   stats={stats}

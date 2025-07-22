@@ -55,14 +55,14 @@ const brandData = [
 
 const FundedCompanies = () => {
   return (
-    <div className="lg:container md:container px-3 w-full h-[199px] border-t-[1px] border-grey-50">
-      <div className="flex lg:flex-row flex-col lg:gap-12 gap-2 justify-center items-center h-full">
+    <div className="lg:container md:container px-3 w-full h-auto border-t-[1px] border-grey-50 ">
+      <div className="flex lg:flex-row flex-col lg:gap-12 gap-2 justify-center items-center py-16">
         <div className="text-[16px] font-semibold lg:w-[20%] w-full">
           Trusted and funded by more than 800 companies
         </div>
         <div className="lg:w-[65%] w-full overflow-x-hidden">
           <Swiper
-            modules={[Pagination, EffectCoverflow]}
+            modules={[Pagination, Autoplay, EffectCoverflow]}
             spaceBetween={40}
             grabCursor={true}
             centeredSlides={true}
@@ -85,7 +85,7 @@ const FundedCompanies = () => {
             }}
           >
             {brandData.map((item, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} >
                 <Image
                   src={item.imgName}
                   alt={item.textal}

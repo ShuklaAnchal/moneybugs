@@ -3,6 +3,7 @@ import Map from './map';
 import Social from '@/app/component/navbar.js/social';
 import Claimcard from '../claimcard';
 import ContactForm from './contactForm'
+import ContactBackground from "@/icons/contact/contactbg.jpg"
 
 import { MdEmail } from 'react-icons/md';
 import { FaSquarePhone } from 'react-icons/fa6';
@@ -10,9 +11,11 @@ import { IoLocationSharp } from 'react-icons/io5';
 
 const ContactUs = () => {
   return (
-    <div className="flex flex-col bg-[url('https://theme9.nisharindia.in/assets/images/update-10-02-2023/shapes/testimonial-five-shape-1.png')] bg-no-repeat bg-cover bg-center">
+    <div className="flex flex-col py-10 bg-center">
+      
       {/* Hero Section */}
-      <div className="min-h-[40vh] w-full flex flex-col justify-center items-center px-4 text-center">
+     <div>
+       <div className="min-h-[40vh] w-full flex flex-col justify-center items-center py-5 px-4 text-center">
         <h1 className="text-[32px] md:text-[40px] lg:text-[45px] font-bold text-primary">
           Contact Us
         </h1>
@@ -22,7 +25,7 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Info + Form */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:container md:container mx-auto px-3 py-10 gap-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:container md:container mx-auto px-3 py-16 gap-10">
         {/* Left Side - Contact Info */}
         <div className="flex flex-col w-full lg:w-1/2 gap-5">
           <h2 className="text-[24px] md:text-[30px] font-bold text-black">
@@ -57,13 +60,14 @@ const ContactUs = () => {
         </div>
 
         {/* Right Side - Form */}
-        <div className="px-4">
+        <div className="px-10">
         <ContactForm />
         </div>
       </div>
+     </div>
 
       {/* Map Section */}
-      <div className="w-full flex justify-center items-center mb-16 px-4">
+      <div className="w-full flex justify-center items-center py-10 mb-14 px-4">
         <Map />
       </div>
 

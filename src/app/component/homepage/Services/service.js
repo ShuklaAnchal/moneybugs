@@ -7,6 +7,13 @@ import { RiFundsFill } from "react-icons/ri";
 
 import Image from "next/image";
 import ServiceImage from "@/icons/companylogo/services-5-4.jpg";
+import Motar from "@/icons/main/car.jpg"
+import Traval from "@/icons/main/traval.jpg"
+import Life from "@/icons/main/life.webp";
+import Mutual from "@/icons/main/mutual-funds.webp";
+import Property from "@/icons/main/prpo.jpg";
+import Child from "@/icons/main/savings-child.jpg"
+import Bussiness from "@/icons/main/bussiness.jpg"
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 
 const insuranceData = [
@@ -19,53 +26,53 @@ const insuranceData = [
   },
   {
     title: "MOTOR INSURANCE",
-    image: ServiceImage,
+    image: Motar,
     icon: <FaCar />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
-    title: "LIFE INSURANCE",
-    image: ServiceImage,
+    title: "Term INSURANCE",
+    image: Life,
     icon: <FaHandHoldingMedical />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
     title: "TRAVAL INSURANCE",
-    image: ServiceImage,
+    image: Traval,
     icon: <FaPlaneDeparture  />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
     title: "MUTUAL FUND /SIP",
-    image: ServiceImage,
+    image: Mutual,
     icon: <RiFundsFill />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
   {
-    title: "PROPERTY INSURANCE",
-    image: ServiceImage,
+    title: "Child Saving Plan",
+    image: Child,
     icon: <FaBuilding />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
   },
-  {
-    title: "BUSSINESS INSURANCE",
-    image: ServiceImage,
-    icon: <FaIndustry />,
-    description:
-      "There are many lipsum of passages of available but the have in that not some.",
-  },
-  {
-    title: "CORPORATE INSURANCE",
-    image: ServiceImage,
-    icon: <FaUmbrellaBeach  />,
-    description:
-      "There are many lipsum of passages of available but the have in that not some.",
-  },
+  // {
+  //   title: "BUSSINESS INSURANCE",
+  //   image: Bussiness,
+  //   icon: <FaIndustry />,
+  //   description:
+  //     "There are many lipsum of passages of available but the have in that not some.",
+  // },
+  // {
+  //   title: "CORPORATE INSURANCE",
+  //   image: ServiceImage,
+  //   icon: <FaUmbrellaBeach  />,
+  //   description:
+  //     "There are many lipsum of passages of available but the have in that not some.",
+  // },
 ];
 
 const service = () => {

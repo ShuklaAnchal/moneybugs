@@ -109,17 +109,26 @@ const paragraphs = [
           buttonBgColor="bg-white"
           buttonHoverColor="hover:bg-secondary"
           buttonTextColor="hover:text-black"
+          backgroundcolor='bg-primary'
         />
 
         <Rightcom
           // cardData={cardItems}
+          paddings={"p-6"}
           backgroundImage={Health}
         />
       </div>
 <div className="mt-7">
 
-  <SupportCard cards={cardData} />
-  <SuccessSection   tagline="YOUR PATH TO SUCCESS"
+  <SupportCard  
+  heading="Health Insurance Near Me"
+  subheading="Bhopal's Leading Health Insurance Consulting Firm" 
+  cards={cardData} 
+  />
+
+
+  <SuccessSection   
+  tagline="YOUR PATH TO SUCCESS"
   heading="Success Defined in a Different Way"
   paragraphs={paragraphs}
   stats={stats}

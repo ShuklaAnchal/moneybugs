@@ -25,15 +25,15 @@ const page = () => {
   const benefits = [
     {
       label: "Individual Health Insurance",
-      icon: "/icons/individual.png",
+      icon: imge1,
     },
     {
       label: "Family Health Insurance",
-      icon: "/icons/family.png",
+      icon: imge2,
     },
     {
       label: "Senior Citizen Plan",
-      icon: "/icons/senior.png",
+      icon: imge3,
     },
   ];
 
@@ -113,6 +113,7 @@ const paragraphs = [
 
         <Rightcom
           // cardData={cardItems}
+          paddings={"p-6"}
           backgroundImage={Health}
         />
       </div>

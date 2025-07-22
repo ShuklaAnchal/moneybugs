@@ -9,6 +9,15 @@ import { FaSquarePhone } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
 
 const Footer = () => {
+  const navLinks = [
+    { label: "Health Insurance", href: "/health-insurance" },
+    { label: "Motor Insurance", href: "/motor-insurance" },
+    { label: "Term Insurance", href: "/term-insurance" },
+    { label: "SIP and Mutual Fund", href: "/sip-and-mutual-fund" },
+    { label: "Traval Insurance", href: "/travel-insurance" },
+    { label: "Child Saving Plan", href: "/child-saving-plan" },
+  ];
+
   return (
     <div className="bg-[#191c1E] px-4 sm:px-6 md:px-10 lg:px-[117px] py-10">
       <div className="flex flex-col lg:flex-row flex-wrap justify-between gap-12 lg:gap-4">
@@ -16,7 +25,8 @@ const Footer = () => {
         <div className="flex flex-col gap-6 max-w-sm">
           <Image src={Logo} alt="Logo" />
           <p className="text-sm text-texthearder w-[75%]">
-            MoneyBugs is a one-stop that offer customers a wide range of Risk management and Investment solution products under one roof.
+            MoneyBugs is a one-stop that offer customers a wide range of Risk
+            management and Investment solution products under one roof.
           </p>
           <button className="bg-primary w-44 py-3 rounded-full text-white text-sm font-semibold hover:bg-white hover:text-primary transition">
             GET A QUOTE
@@ -27,31 +37,22 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           <h3 className="text-lg font-bold text-white">Links</h3>
           <div className="flex flex-col text-base text-texthearder gap-2">
-            <Link href="#">About</Link>
-            <Link href="#">Insurance</Link>
-            <Link href="#">Latest Portfolio</Link>
-            <Link href="#">Our Faqs</Link>
-            <Link href="#">Get in Touch</Link>
+            <Link href="/">Home</Link>
+            <Link href="/about-us">About Us</Link>
+            <Link href="#">Blogs</Link>
+            <Link href="/contactUs">Contact Us</Link>
           </div>
         </div>
 
         {/* Latest News */}
         <div className="flex flex-col gap-4 max-w-sm">
-          <h3 className="text-lg font-bold text-white">Latest News</h3>
-          <div className="flex gap-3">
-            <div className="h-16 w-16 bg-blue-500 overflow-hidden rounded">
-              <img
-                className="object-cover h-full w-full"
-                src="https://images.unsplash.com/photo-1750969393822-36e48a31895f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0"
-                alt="News"
-              />
-            </div>
-            <div className="flex flex-col text-sm">
-              <span className="text-primary">20 Jan, 2023</span>
-              <span className="text-white font-bold">
-                Our Insurance Strategy for Large Business
-              </span>
-            </div>
+          <h3 className="text-lg font-bold text-white">Solutions</h3>
+          <div className="flex flex-col text-base text-texthearder gap-3">
+            {navLinks.map((link, index) => (
+              <Link key={index} href={link.href}>
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -75,16 +76,23 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full flex lg:flex-row md:flex-row flex-col text-textsecondry lg:gap-14 md:gap-12 gap-2 font-bold justify-center mt-12">
-       <Link href="/privacy-policy" > <h1>Privacy Policy</h1></Link>
-       <Link href="/disclaimer" > <h1>Disclaimer</h1></Link>
-       <Link href="/terms-and-conditions" > <h1>Terms & Conditions</h1></Link>
+        <Link href="/privacy-policy">
+          {" "}
+          <h1>Privacy Policy</h1>
+        </Link>
+        <Link href="/disclaimer">
+          {" "}
+          <h1>Disclaimer</h1>
+        </Link>
+        <Link href="/terms-and-conditions">
+          {" "}
+          <h1>Terms & Conditions</h1>
+        </Link>
       </div>
       {/* Bottom Footer */}
       <div className="pt-6 mt-4 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-texthearder">
         <div>© All Copyright MoneyBugs</div>
-        <Social 
-          iconcolor={"text-white"}
-        />
+        <Social iconcolor={"text-white"} />
       </div>
     </div>
   );

@@ -17,19 +17,23 @@ import SupportCard from "@/app/component/health/supportcard";
 import SuccessSection from "../component/health/sucesssection";
 import ConfusionSection from "@/app/component/health/ConfusionSection";
 
+import imge1 from "@/icons/health/image-1.svg"
+import imge2 from "@/icons/health/image-2.svg"
+import imge3 from "@/icons/health/image-3.svg"
+
 const page = () => {
   const benefits = [
     {
       label: "Individual Health Insurance",
-      icon: "/icons/individual.png",
+      icon: imge1,
     },
     {
       label: "Family Health Insurance",
-      icon: "/icons/family.png",
+      icon:imge2,
     },
     {
       label: "Senior Citizen Plan",
-      icon: "/icons/senior.png",
+      icon: imge3,
     },
   ];
 
@@ -90,8 +94,9 @@ const page = () => {
     <div className="h-auto w-full">
       <Uppernavbar />
       <Uppepart
-        title="Compare, Choose, Insure – The Smart Way To Buy Health Insurance!"
-        description="Finding the perfect health insurance plan can be overwhelming, but we make it easy! Compare top insurance providers, customize your coverage, and buy the best policy–all in just a few clicks."
+        title="Best Investment Plans in 2025"
+        description="Smart Investments with Money Bugs!
+Secure your future with our expert-picked SIP & Mutual Fund Plans. We help you grow wealth with the best funds, tailored strategies, and expert insights-backed by research and proven results."
         benefits={benefits}
         imageSrc={WelcomeImage}
         quotes={quotes}
@@ -111,8 +116,9 @@ const page = () => {
         <div className="w-full lg:h-[90vh] h-auto bg-primary flex lg:flex-row flex-col mt-12">
           <Leftcom
             subtitle="Why Choose Money Bugs"
-            heading="Bhopal's Leading Health Insurance Consultant"
-            description="Choose us for expert insurance solutions, seamless policy comparisons, and dedicated support. We ensure hassle-free services with personalized guidance and competitive pricing."
+            heading="SIP & Mutual Funds Investment Plans"
+            description="At Money Bugs, we bring 14 years of expertise in guiding investors toward smart and goal-based investments through Systematic Investment Plans (SIP) and Mutual Funds. Our experience, combined with deep market insights, ensures that your hard-earned money is invested wisely for maximum growth and financial security."
+           
             buttonBgColor="bg-white"
             buttonHoverColor="hover:bg-secondary"
             buttonTextColor="hover:text-black"
@@ -121,6 +127,7 @@ const page = () => {
           <Rightcom
             // cardData={cardItems}
             backgroundImage={Health}
+            paddings={"p-6"}
           />
         </div>
 
