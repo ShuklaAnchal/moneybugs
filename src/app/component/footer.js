@@ -38,7 +38,7 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-white">Links</h3>
           <div className="flex flex-col text-base text-texthearder gap-2">
             <Link href="/">Home</Link>
-            <Link href="/about-us">About Us</Link>
+            <Link href="/About-Us">About Us</Link>
             <Link href="#">Blogs</Link>
             <Link href="/contactUs">Contact Us</Link>
           </div>
