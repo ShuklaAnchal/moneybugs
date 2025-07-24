@@ -7,7 +7,7 @@ import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 
-import Logo from "@/icons/logo.png";
+import Logo from "@/icons/moneybugs.png";
 import { IoSearchOutline } from "react-icons/io5";
 
 import Social from "@/app/component/navbar.js/social";
@@ -16,7 +16,7 @@ const navItems = [
   { label: "Home", href: "/" },
   {
     label: "About Us",
-    href: "/About-Us",
+    href: "/about-page",
   },
   {
     label: "Insurance",
@@ -70,8 +70,8 @@ const UpperNavbar = () => {
         <div className="h-[110px] flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-            <div className="h-[51px] w-[142px]">
-              <Image src={Logo} alt="MoneyBugs Logo" />
+            <div className="h-[80px] w-[150px] bg-red-500">
+              <Image src={Logo} alt="MoneyBugs Logo" className="h-full w-full object-containt" />
             </div>
           </Link>
 

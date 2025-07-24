@@ -11,10 +11,10 @@ const TeamCard = () => {
   return (
     <div className='flex flex-row gap-10 flex-wrap lg:justify-between justify-center px-3'>
       {cardData.map((item, index) => (
-        <div key={index} className='w-[316px] h-[426px] bg-red-500 mb-5 rounded-[110px] relative overflow-hidden'>
+        <div key={index} className='w-[316px] h-[426px] bg-textinsu mb-5 rounded-[110px] relative overflow-hidden'>
           <img src={item.cardimg} alt='bg image' className='absolute z-0 h-full w-full inset-0 object-cover' />
 
-          <div className='h-[106px] w-full bg-red-500 absolute bottom-0 left-0 z-10 text-center flex flex-col justify-center'>
+          <div className='h-[106px] w-full bg-textinsu absolute bottom-0 left-0 z-10 text-center flex flex-col justify-center'>
             <div className='text-white'>
               <h2 className='text-[24px] font-semibold hover:text-black'>{item.name}</h2>
               <p className='text-[16px]'>{item.post}</p>

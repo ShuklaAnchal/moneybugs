@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/icons/logo.png";
-
+import Logo from "@/icons/moneybugs.png";
 import Social from "@/app/component/navbar.js/social";
 import { MdEmail } from "react-icons/md";
 import { FaSquarePhone } from "react-icons/fa6";
@@ -14,7 +13,7 @@ const Footer = () => {
     { label: "Motor Insurance", href: "/motor-insurance" },
     { label: "Term Insurance", href: "/term-insurance" },
     { label: "SIP and Mutual Fund", href: "/sip-and-mutual-fund" },
-    { label: "Traval Insurance", href: "/travel-insurance" },
+    { label: "Travel Insurance", href: "/travel-insurance" },
     { label: "Child Saving Plan", href: "/child-saving-plan" },
   ];
 
@@ -23,7 +22,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row flex-wrap justify-between gap-12 lg:gap-4">
         {/* Logo + Text + Button */}
         <div className="flex flex-col gap-6 max-w-sm">
-          <Image src={Logo} alt="Logo" />
+          <Image src={Logo} alt="Logo" className="h-[80px] w-[180px]" />
           <p className="text-sm text-texthearder w-[75%]">
             MoneyBugs is a one-stop that offer customers a wide range of Risk
             management and Investment solution products under one roof.
@@ -38,7 +37,7 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-white">Links</h3>
           <div className="flex flex-col text-base text-texthearder gap-2">
             <Link href="/">Home</Link>
-            <Link href="/About-Us">About Us</Link>
+            <Link href="/about-page">About Us</Link>
             <Link href="#">Blogs</Link>
             <Link href="/contactUs">Contact Us</Link>
           </div>

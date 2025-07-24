@@ -48,7 +48,7 @@ const Feedback = () => {
       {/* Content */}
       <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:bg-transparent md:bg-transparent sm:bg-[#f3f3f3]">
         <p className="text-[16px] text-textsecondry">Our Feedbacks</p>
-        <h1 className="text-[30px] md:text-[38px] lg:text-[45px] font-semibold mb-12">
+        <h1 className="text-[30px] md:text-[38px] lg:text-[45px] text-bgbluecolor font-semibold mb-12">
           What They’re Talking?
         </h1>
 
@@ -75,7 +75,7 @@ const Feedback = () => {
             <SwiperSlide key={index}>
               <div className="w-full max-w-[370px] mx-auto flex flex-col items-center relative group transition-all duration-300">
                 {/* Card */}
-                <div className="relative bg-white group-hover:bg-[#191C1E] rounded-[16px] shadow-xl px-6 py-6 pt-8 w-full min-h-[311px] text-center transition-all duration-300">
+                <div className="relative bg-white group-hover:bg-bgbluecolor rounded-[16px] shadow-xl px-6 py-6 pt-8 w-full min-h-[311px] text-center transition-all duration-300">
                   <div className="bg-primary inline-block px-12 py-3 rounded-md mb-4">
                     <div className="flex gap-1 text-white justify-center">
                       {Array(item.rating).fill(0).map((_, i) => (
@@ -86,7 +86,7 @@ const Feedback = () => {
                   <p className="text-[15px] leading-relaxed text-textsecondry group-hover:text-white transition-all duration-300">
                     “{item.feedback}”
                   </p>
-                  <div className="absolute left-1/2 -bottom-[10px] transform -translate-x-1/3 w-7 h-7 bg-white group-hover:bg-[#191C1E] rotate-45 z-0 transition-all duration-300"></div>
+                  <div className="absolute left-1/2 -bottom-[10px] transform -translate-x-1/3 w-7 h-7 bg-white group-hover:bg-bgbluecolor rotate-45 z-0 transition-all duration-300"></div>
                 </div>
 
                 {/* Profile Info */}
@@ -96,7 +96,7 @@ const Feedback = () => {
                     alt={item.name}
                     width={85}
                     height={85}
-                    className="rounded-full border-[6px] border-[#f3f3f3] group-hover:border-primary shadow-md transition-all duration-300"
+                    className="rounded-full border-[6px] border-[#f3f3f3] group-hover:border-bgbluecolor shadow-md transition-all duration-300"
                   />
                   <p className="text-[12px] text-textsecondry mt-2 tracking-widest">
                     {item.title}

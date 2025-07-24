@@ -3,7 +3,7 @@ import React from "react";
 
 import Uppernavbar from "@/app/component/uppernavbar";
 import Footer from "@/app/component/footer";
-import Uppepart from "@/app/component/health/upperpart";
+import Uppepart from "@/app/component/insurance/siptop";
 import WelcomeImage from "@/icons/main/welcome.jpg";
 import Health from "@/icons/health/health-insurance.jpg"
 import Leftcom from "@/app/component/homepage/opportunitycomponents.js/leftcom";
@@ -13,34 +13,13 @@ import { GrUserManager } from "react-icons/gr";
 import { FaHandHoldingHand } from "react-icons/fa6";
 import { TbHomeCog } from "react-icons/tb";
 import { FaUserShield, FaSmile, FaChartLine } from "react-icons/fa";
-import SupportCard from "@/app/component/health/supportcard";
-import SuccessSection from "../component/health/sucesssection";
-import ConfusionSection from "@/app/component/health/ConfusionSection";
+import SupportCard from "@/app/component/insurance/supportcard";
+import SuccessSection from "../component/insurance/sucesssection";
+import ConfusionSection from "@/app/component/insurance/ConfusionSection";
+import MutualFundImage from "@/icons/sip/money-bugs-sip.jpg";
 
-import imge1 from "@/icons/health/image-1.svg"
-import imge2 from "@/icons/health/image-2.svg"
-import imge3 from "@/icons/health/image-3.svg"
 
 const page = () => {
-  const benefits = [
-    {
-      label: "Individual Health Insurance",
-      icon: imge1,
-    },
-    {
-      label: "Family Health Insurance",
-      icon: imge2,
-    },
-    {
-      label: "Senior Citizen Plan",
-      icon: imge3,
-    },
-  ];
-
-  const quotes = [
-    "Medical Emergencies Are Unpredictable, But Your Coverage Shouldn’t Be.",
-    "Because Peace Of Mind Is The Best Prescription—Insure Your Health Today!",
-  ];
 
  const cardData = [
   {
@@ -83,61 +62,51 @@ const stats = [
   },
 ];
 
-const paragraphs = [
-  "Redefining success through trust, transparency, and excellence in insurance services. We go beyond just policies, ensuring personalized solutions that meet your unique needs.",
-  "With expert guidance, seamless support, and a customer-first approach, we make insurance simple, accessible, and stress-free.",
-  "At Money Bugs, success is not just about numbers; it's about building lasting relationships and providing real value.",
-  "Our commitment to innovation and customer satisfaction ensures you always receive the peace of mind you deserve.",
-];
+  const paragraphs = [
+    "With SIP (Systematic Investment Plan), a fixed amount is automatically deducted from your bank account at regular intervals and invested in a mutual fund scheme of your choice. The number of units you receive is based on the fund’s Net Asset Value (NAV) on the day of investment.",
+    "SIP offers numerous benefits including:\n✅ Disciplined investing\n✅ Power of compounding\n✅ No need to time the market\n✅ Affordable – Start with just ₹500/month\n✅ Reduces risk through rupee cost averaging",
+    "SIP is ideal for consistent, long-term investors because it helps manage market volatility. However, lump sum investment can also be beneficial during market corrections or if you have a large investable amount and want to capitalize on market lows.",
+    "One of the key advantages of SIP is flexibility. You can pause, stop, or modify your SIP anytime without penalties. Still, we recommend staying invested for the long term to maximize returns and reap the true benefits of compounding.",
+  ];
 
   return (
     <div className="h-auto w-full">
       <Uppernavbar />
       <Uppepart
-        title="Compare, Choose, Insure – The Smart Way To Buy Health Insurance!"
-        description="Finding the perfect health insurance plan can be overwhelming, but we make it easy! Compare top insurance providers, customize your coverage, and buy the best policy–all in just a few clicks."
-        benefits={benefits}
-        imageSrc={WelcomeImage}
-        quotes={quotes}
+        title="Best Investment Plans In 2025"
+        subtitle="Smart Investments With Money Bugs!"
+        description="Secure Your Future With Our Expert-Picked SIP & Mutual Fund Plans. We Help You Grow Wealth With The Best Funds, Tailored Strategies, And Expert Insights–Backed By Research And Proven Results."
+        ctaText="Connect Now"
+        phone="+91 9755040311"
+        whatsappText="Call & Whatsapp"
+        imageSrc={MutualFundImage}
       />
 
-      <div className="w-full lg:h-[90vh] h-auto bg-primary flex lg:flex-row flex-col mt-12">
-        <Leftcom
-          subtitle="Why Choose Money Bugs"
-          heading="Bhopal's Leading Health Insurance Consultant"
-          description="Choose us for expert insurance solutions, seamless policy comparisons, and dedicated support. We ensure hassle-free services with personalized guidance and competitive pricing."
-          buttonBgColor="bg-white"
-          buttonHoverColor="hover:bg-secondary"
-          buttonTextColor="hover:text-black"
-        />
-
-        <Rightcom
-          // cardData={cardItems}
-          backgroundImage={Health}
-          paddings={"p-6"}
-        />
-      </div>
 <div className="mt-7">
 
   <SupportCard 
   heading="Money Bugs : SIP & Mutual Funds Investment Plans"
-  subheading="We Offer a Whole Range of Investment Plans"
+  subheading="Why Choose US!"
   cards={cardData} />
   <SuccessSection   
   tagline="YOUR PATH TO SUCCESS"
-  heading="Success Defined in a Different Way"
+  heading="SIP & Mutual Funds Investment Plans"
   paragraphs={paragraphs}
   stats={stats}
   buttonText="Contact Us"
   onButtonClick={() => console.log("Redirect to Contact page")}
   />
+
+
   <ConfusionSection
   title="Having Confusion In Mind Or Not Happy With Current Insurer"
-  description="If you're unsure about your current policy or not satisfied with your insurer, we’re here to help! At Money Bugs, we provide expert consultation, transparent comparisons, and personalized solutions to ensure you get the best coverage at the right price."
+  description="At Money Bugs, we bring 14 years of expertise in guiding investors toward smart and goal-based investments through Systematic Investment Plans (SIP) and Mutual Funds. Our experience, combined with deep market insights, ensures that your hard-earned money is invested wisely for maximum growth and financial security."
   phone="+91 97550 40311"
   showForm={true}
 />
 </div>
+
+
       <Footer />
     </div>
   );

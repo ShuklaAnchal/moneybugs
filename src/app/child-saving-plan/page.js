@@ -3,7 +3,7 @@ import React from "react";
 
 import Uppernavbar from "@/app/component/uppernavbar";
 import Footer from "@/app/component/footer";
-import Uppepart from "@/app/component/health/upperpart";
+import Uppepart from "@/app/component/insurance/siptop";
 import WelcomeImage from "@/icons/main/welcome.jpg";
 import Health from "@/icons/health/health-insurance.jpg";
 import Leftcom from "@/app/component/homepage/opportunitycomponents.js/leftcom";
@@ -13,34 +13,14 @@ import { GrUserManager } from "react-icons/gr";
 import { FaHandHoldingHand } from "react-icons/fa6";
 import { TbHomeCog } from "react-icons/tb";
 import { FaUserShield, FaSmile, FaChartLine } from "react-icons/fa";
-import SupportCard from "@/app/component/health/supportcard";
-import SuccessSection from "../component/health/sucesssection";
-import ConfusionSection from "@/app/component/health/ConfusionSection";
+import SupportCard from "@/app/component/insurance/supportcard";
+import SuccessSection from "../component/insurance/sucesssection";
+import ConfusionSection from "@/app/component/insurance/ConfusionSection";
 
-import imge1 from "@/icons/health/image-1.svg"
-import imge2 from "@/icons/health/image-2.svg"
-import imge3 from "@/icons/health/image-3.svg"
+import Child from "@/icons/child/child.jpg";
+import Child1 from "@/icons/child/childinsu.jpg";
 
 const page = () => {
-  const benefits = [
-    {
-      label: "Individual Health Insurance",
-      icon: imge1,
-    },
-    {
-      label: "Family Health Insurance",
-      icon:imge2,
-    },
-    {
-      label: "Senior Citizen Plan",
-      icon: imge3,
-    },
-  ];
-
-  const quotes = [
-    "Medical Emergencies Are Unpredictable, But Your Coverage Shouldn’t Be.",
-    "Because Peace Of Mind Is The Best Prescription—Insure Your Health Today!",
-  ];
 
   const cardData = [
     {
@@ -84,51 +64,53 @@ const page = () => {
   ];
 
   const paragraphs = [
-    "Redefining success through trust, transparency, and excellence in insurance services. We go beyond just policies, ensuring personalized solutions that meet your unique needs.",
-    "With expert guidance, seamless support, and a customer-first approach, we make insurance simple, accessible, and stress-free.",
-    "At Money Bugs, success is not just about numbers; it's about building lasting relationships and providing real value.",
-    "Our commitment to innovation and customer satisfaction ensures you always receive the peace of mind you deserve.",
-  ];
+    "Money Bugs offers expert financial guidance, customized saving plans, high returns with low risk, tax benefits, and complete transparency. We simplify the process, ensuring hassle-free investments tailored to your needs.",
+    "You invest a fixed amount regularly (monthly, quarterly, or annually) into the plan. The money grows over time, and at maturity, you receive a lump sum payout or periodic benefits based on the plan you choose. Some plans also offer insurance coverage in case of unforeseen circumstances.",
+    "Secure and systematic savings for your child’s future",
+    "Potential for high returns through guaranteed or market-linked plans",
+    "Tax benefits under Section 80C and 10(10D) of the Income Tax Act",
+    "Insurance protection in case of the policyholder’s demise",
+    "Flexible payout options to support higher education or other major expenses"
+   ];
 
   return (
     <div className="h-auto w-full">
       <Uppernavbar />
       <Uppepart
-        title="Best Investment Plans in 2025"
-        description="Smart Investments with Money Bugs!
-Secure your future with our expert-picked SIP & Mutual Fund Plans. We help you grow wealth with the best funds, tailored strategies, and expert insights-backed by research and proven results."
-        benefits={benefits}
-        imageSrc={WelcomeImage}
-        quotes={quotes}
+         title="Fly, Explore, Relax - We've Got You Covered"
+                     //  subtitle="Smart Investments With Money Bugs!"
+                      description="At Money Bugs, we understand that travel is all about experiencing new places, meeting new people, and creating unforgettable memories. But unexpected situations can arise, from flight cancellations to medical emergencies. That’s why we offer comprehensive travel insurance to ensure that you can explore the world with peace of mind.."
+                      ctaText="Connect Now"
+                      phone="+91 9755040311"
+                      whatsappText="Call & Whatsapp"
+                      imageSrc={Child}
       />
 
       <div className="mt-7">
-        <SupportCard cards={cardData} />
-        <SuccessSection
-          tagline="YOUR PATH TO SUCCESS"
-          heading="Success Defined in a Different Way"
+
+           <SuccessSection
+          tagline="YOUR Child PATH TO SUCCESS"
+          heading="All About Your Child"
           paragraphs={paragraphs}
           stats={stats}
           buttonText="Contact Us"
           onButtonClick={() => console.log("Redirect to Contact page")}
         />
 
-        <div className="w-full lg:h-[90vh] h-auto bg-primary flex lg:flex-row flex-col mt-12">
-          <Leftcom
-            subtitle="Why Choose Money Bugs"
-            heading="SIP & Mutual Funds Investment Plans"
-            description="At Money Bugs, we bring 14 years of expertise in guiding investors toward smart and goal-based investments through Systematic Investment Plans (SIP) and Mutual Funds. Our experience, combined with deep market insights, ensures that your hard-earned money is invested wisely for maximum growth and financial security."
-           
-            buttonBgColor="bg-white"
-            buttonHoverColor="hover:bg-secondary"
-            buttonTextColor="hover:text-black"
-          />
-
-          <Rightcom
-            // cardData={cardItems}
-            backgroundImage={Health}
+        <div className="w-full lg:h-[90vh] h-auto flex lg:flex-row flex-col">
+            <Rightcom
+            backgroundImage={Child1}
             paddings={"p-6"}
           />
+          <Leftcom
+            subtitle="Child Savings Plan by MONEY BUGS"
+            heading="Why Choose Money Bugs"
+            description="Planning for your child’s future is one of the most important financial decisions you can make. Education, healthcare, and unforeseen expenses require substantial savings, making a well-structured child saving plan essential. At Money Bugs, we understand these concerns and offer customized solutions to ensure your child’s financial security. Here’s why choosing Money Bugs for your child saving plan is the best decision you can make." 
+             buttonBgColor="bg-btncolor"
+          buttonHoverColor="hover:bg-primary"
+          buttonTextColor="hover:text-white"
+          />
+
         </div>
 
         <ConfusionSection

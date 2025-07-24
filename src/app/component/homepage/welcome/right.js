@@ -21,7 +21,7 @@ const CircleProgress = ({ percentage, label }) => {
           cy={radius}
         />
         <circle
-          stroke="#ff4d4d"
+          stroke="#ff7043"
           fill="transparent"
           strokeWidth={stroke}
           strokeDasharray={circumference}
@@ -54,11 +54,11 @@ const Right = () => {
   return (
     <div className="lg:w-[40%] w-full h-full flex justify-center items-center">
       <div className='flex flex-col gap-4'>
-        <p className="text-[16px] text-textsecondry">Welcome to Insur</p>
+        <p className="text-[16px] text-secondryinsurance">Welcome to Insur</p>
         <h1 className="text-[45px] font-semibold leading-[47px]">
           We’re Providing Best Insurance Policy
         </h1>
-        <h2 className="text-primary text-[20px] font-medium mt-2">
+        <h2 className="text-secondryinsurance text-[20px] font-medium mt-2">
           We Have 30 Years of Insurance Experience Globally
         </h2>
         <p className="text-[16px] text-textsecondry mt-2">

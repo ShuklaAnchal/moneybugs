@@ -26,10 +26,15 @@ module.exports = {
         },
       },
       colors: {
-        primary: "#FF494A",
+        primary: "#65A69C",
+        insurancebackground:"#e7f7f5",
+        secondryinsurance:"#091E3C",
         texthearder: "#83888B",
         textsecondry: "#797979",
-        bgbluecolor:"#262E8B"
+        textinsu:"#102450",
+        bgbluecolor:"#262E8B",
+        btncolor:"#846B88",
+        btnsecondcolor:"#ff7043"
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

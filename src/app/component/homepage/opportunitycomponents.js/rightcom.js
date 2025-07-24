@@ -9,12 +9,12 @@ const RightCom = ({
   backgroundImage,
 }) => {
   return (
-    <div className={`relative w-full md:w-1/2 h-full bg-primary`}>
+    <div className={`relative w-full md:w-1/2 h-full`}>
       {/* Background image (only on md and up) */}
       <Image
         src={backgroundImage}
         alt="background"
-        className={`absolute h-full w-full inset-0 z-0 object-fill hidden md:block ${paddings}`}
+        className={`absolute h-full w-full inset-0 z-0 object-fill hidden lg:block ${paddings}`}
       />
 
       {/* Card Content */}
@@ -26,7 +26,7 @@ const RightCom = ({
           >
             {/* Icon + Title */}
             <div className="flex items-center gap-3 md:gap-4 w-full md:w-[50%] mb-4 md:mb-0">
-              <div className="text-red-500 text-[35px] sm:text-[40px] md:text-[50px]">
+              <div className="text-bgbluecolor text-[35px] sm:text-[40px] md:text-[50px]">
                 {item.icon}
               </div>
               <div className="font-semibold text-[18px] text-black leading-tight">
