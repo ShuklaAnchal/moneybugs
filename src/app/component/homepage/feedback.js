@@ -9,7 +9,31 @@ const testimonials = [
   {
     name: "Devid Couper",
     title: "CO FOUNDER",
-    image: "https://theme9.nisharindia.in/assets/images/update-10-02-2023/testimonial/testimonial-5-3.jpg",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    feedback:
+      "All of our lorries are fitted with Satellite Tracking and Temperature Controlled monitoring systems so that the transportation of high value and temperature sensitive loads can be monitored at all times.",
+    rating: 5,
+  },
+    {
+    name: "Devid Couper",
+    title: "CO FOUNDER",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    feedback:
+      "All of our lorries are fitted with Satellite Tracking and Temperature Controlled monitoring systems so that the transportation of high value and temperature sensitive loads can be monitored at all times.",
+    rating: 5,
+  },
+    {
+    name: "Devid Couper",
+    title: "CO FOUNDER",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    feedback:
+      "All of our lorries are fitted with Satellite Tracking and Temperature Controlled monitoring systems so that the transportation of high value and temperature sensitive loads can be monitored at all times.",
+    rating: 5,
+  },
+    {
+    name: "Devid Couper",
+    title: "CO FOUNDER",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
     feedback:
       "All of our lorries are fitted with Satellite Tracking and Temperature Controlled monitoring systems so that the transportation of high value and temperature sensitive loads can be monitored at all times.",
     rating: 5,
@@ -17,7 +41,7 @@ const testimonials = [
 {
     name: "Devid Couper",
     title: "CO FOUNDER",
-    image: "https://theme9.nisharindia.in/assets/images/update-10-02-2023/testimonial/testimonial-5-3.jpg",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
     feedback:
       "All of our lorries are fitted with Satellite Tracking and Temperature Controlled monitoring systems so that the transportation of high value and temperature sensitive loads can be monitored at all times.",
     rating: 5,

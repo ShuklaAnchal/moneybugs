@@ -17,7 +17,7 @@ const Detailes = ({ flexf = '', textsi = '' }) => {
     <div className={`flex gap-3 ${flexf} text-[#84898c] ${textsi}`}>
       {upernavitems.map((item, ind) => (
         <div key={ind} className="flex gap-1 items-center">
-          <item.Icon className="w-4 h-4 text-primary" />
+          <item.Icon className="w-4 h-4 text-white" />
           <span>{item.label}</span>
         </div>
       ))}

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/icons/moneybugs.png";
+import Logo from "@/icons/moneybugs-logo.png";
 import Social from "@/app/component/navbar.js/social";
 import { MdEmail } from "react-icons/md";
 import { FaSquarePhone } from "react-icons/fa6";

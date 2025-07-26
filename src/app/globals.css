@@ -21,7 +21,7 @@
 }
 
   .custom-swiper .swiper-pagination {
-    top: 300px !important; /* You can change to 'top: 10px;' or custom positioning */
+    bottom: 2px !important; /* You can change to 'top: 10px;' or custom positioning */
     left: 0;
     width: 100%;
     display: flex;
@@ -35,5 +35,5 @@
   }
 
   .custom-swiper .swiper-pagination-bullet-active {
-    background: #000000;
+    background: rgb(21, 200, 83);
   }

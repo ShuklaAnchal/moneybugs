@@ -77,7 +77,7 @@ const insuranceData = [
 
 const service = () => {
   return (
-    <div className="h-[90vh] w-full flex justify-center relative ">
+    <div className="h-[90vh] w-full flex justify-center relative">
       <div className="lg:h-[80vh] h-auto lg:w-[90%] w-full absolute lg:top-[-20%] top-[0] z-[20] ">
         <div className="w-full h-[70%] bg-white lg:shadow shadow-none rounded-[16px] flex flex-col text-center ">
           <div className="flex flex-col leading-[45px] mt-14">
@@ -91,7 +91,7 @@ const service = () => {
           </div>
           <div className="lg:px-[6rem] px-3 lg:mt-[90px] mt-[30px] lg:mb-0 mb-[20px] z-[50]">
             <Swiper
-              className="overflow-y-auto h-80"
+              className="overflow-y-auto h-80 custom-swiper"
               modules={[Pagination, Autoplay, EffectCoverflow]}
               spaceBetween={20}
               slidesPerView={1}

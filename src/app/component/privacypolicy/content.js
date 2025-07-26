@@ -2,7 +2,7 @@ import React from 'react'
 
 const content = () => {
   return (
-    <div className='w-full h-auto container mt-16 text-[#7A7A7A] text-[14px]'>
+    <div className='w-full h-auto lg:container md:container px-3 mt-16 text-[#7A7A7A] text-[14px]'>
       <h1 className="text-2xl font-bold text-blue-800 mb-6">Privacy Policy for Money Bugs</h1>
 
       <h2 className="text-[16px] font-bold mb-2">1. Introduction</h2>

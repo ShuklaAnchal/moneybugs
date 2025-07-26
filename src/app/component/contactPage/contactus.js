@@ -25,7 +25,7 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Info + Form */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:container md:container mx-auto px-3 py-16 gap-10">
+      <div className="flex flex-col lg:flex-row md:flex-row justify-between lg:items-start md:lg:items-start items-center lg:container md:container mx-auto px-3 py-16 gap-10">
         {/* Left Side - Contact Info */}
         <div className="flex flex-col w-full lg:w-1/2 gap-5">
           <h2 className="text-[24px] md:text-[30px] font-bold text-black">

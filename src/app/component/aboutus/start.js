@@ -23,7 +23,7 @@ const AboutUs = () => {
       <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-16 lg:py-10 md:py-8 py-0">
         <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
           <Image src={officeImage} alt="Office" fill className="object-cover" />
-          <div className="absolute bottom-0 left-0 right-0 bg-blue-600 text-white p-4">
+          <div className="absolute bottom-0 left-0 right-0 h-28 bg-blue-600 text-white p-4">
             <h3 className="font-bold text-lg">About Money Bugs</h3>
             <p className="text-sm">
               Money Bugs has 14+ years of experience in providing expert insurance solutions, offering seamless service, competitive pricing, and personalized guidance to ensure the best coverage for you.
@@ -32,7 +32,7 @@ const AboutUs = () => {
         </div>
         <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
           <Image src={teamImage} alt="Team" fill className="object-cover" />
-          <div className="absolute bottom-0 left-0 right-0 bg-blue-700 text-white p-4">
+          <div className="absolute bottom-0 left-0 right-0 bg-blue-700 text-white p-4 h-28">
             <h3 className="font-bold text-lg">Our Vision & Value</h3>
             <p className="text-sm">
               We believe in integrity, transparency, customer satisfaction, and innovation, ensuring sustainable solutions with expert guidance for every client.

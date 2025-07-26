@@ -52,7 +52,7 @@ const CircleProgress = ({ percentage, label }) => {
 // Main Component
 const Right = () => {
   return (
-    <div className="lg:w-[40%] w-full h-full flex justify-center items-center">
+    <div className="lg:w-[40%] w-full h-full flex justify-start items-start">
       <div className='flex flex-col gap-4'>
         <p className="text-[16px] text-secondryinsurance">Welcome to Insur</p>
         <h1 className="text-[45px] font-semibold leading-[47px]">

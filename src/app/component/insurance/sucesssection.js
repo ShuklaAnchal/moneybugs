@@ -11,7 +11,7 @@ const SuccessSection = ({
 }) => {
   return (
     <section className="bg-[#f7faff] py-20 px-4 md:px-10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12">
+      <div className="max-w-7xl mx-auto flex flex-col justify-between md:flex-row items-start gap-12">
         {/* Text Content */}
         <div className="w-full md:w-1/2">
           {tagline && (
@@ -37,7 +37,7 @@ const SuccessSection = ({
         </div>
 
         {/* Stats */}
-<div className="relative pl-6 md:pl-10 ">
+<div className="relative pl-6 md:pl-10 w-[30%] ">
   {/* Vertical line */}
   <div className="absolute top-0 left-3.5 md:left-4 w-0.5 bg-gray-200 h-full"></div>
 
