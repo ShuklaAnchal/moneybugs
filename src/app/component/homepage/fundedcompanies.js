@@ -56,36 +56,44 @@ const brandData = [
 const FundedCompanies = () => {
   return (
     <div className="lg:container md:container px-3 w-full h-auto border-t-[1px] border-grey-50 ">
-      <div className="flex lg:flex-row flex-col lg:gap-12 gap-2 justify-center items-center py-16">
+      <div className="flex lg:flex-row flex-col lg:gap-12 gap-2 lg:justify-center lg:justify-center justify-between  items-center lg:py-16 md:py-16 py-4">
         <div className="text-[16px] font-semibold lg:w-[20%] w-full">
           Trusted and funded by more than 800 companies
         </div>
-        <div className="lg:w-[65%] w-full overflow-x-hidden">
+        <div className="lg:w-[65%] w-full overflow-visible">
           <Swiper
             modules={[Pagination, Autoplay, EffectCoverflow]}
-            spaceBetween={40}
+            spaceBetween={20}
             grabCursor={true}
             centeredSlides={true}
             loop={true}
             autoplay={{ delay: 5000 }}
-          slidesPerView={5}
+            slidesPerView={1.5}
             breakpoints={{
-              400: {
-                slidesPerView: 3,
-                spaceBetween: 100,
+              320: {
+                slidesPerView: 2.2,
+                spaceBetween: 20,
+              },
+              480: {
+                slidesPerView: 2.5,
+                spaceBetween: 30,
               },
               768: {
-                slidesPerView: 5,
+                slidesPerView: 3,
                 spaceBetween: 30,
               },
               1024: {
-                slidesPerView: 5,
+                slidesPerView: 4,
                 spaceBetween: 40,
+              },
+              1280: {
+                slidesPerView: 5,
+                spaceBetween: 50,
               },
             }}
           >
             {brandData.map((item, index) => (
-              <SwiperSlide key={index} >
+              <SwiperSlide key={index}>
                 <Image
                   src={item.imgName}
                   alt={item.textal}

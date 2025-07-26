@@ -17,11 +17,15 @@
 } 
 
 .bgclo {
-  background: linear-gradient(to bottom, #0EB09E, #99FEAC);
+  background: linear-gradient(to bottom, #0EB09E , #99FEAC );
+}
+
+.bgclo1 {
+  background: linear-gradient(to right, #0EB09E 0%, #0EB09E 50%, #99FEAC 100%);
 }
 
   .custom-swiper .swiper-pagination {
-    bottom: 2px !important; /* You can change to 'top: 10px;' or custom positioning */
+    bottom: 18px !important; /* You can change to 'top: 10px;' or custom positioning */
     left: 0;
     width: 100%;
     display: flex;
@@ -30,10 +34,10 @@
   }
 
   .custom-swiper .swiper-pagination-bullet {
-    background: blue; /* Custom color */
+    background:  #83888B; /* Custom color */
     opacity: 1;
   }
 
   .custom-swiper .swiper-pagination-bullet-active {
-    background: rgb(21, 200, 83);
+    background:#99FEAC;
   }

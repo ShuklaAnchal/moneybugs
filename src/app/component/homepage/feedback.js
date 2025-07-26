@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
+import BackgroundImage from "@/icons/background-feedback.png";
 
 const testimonials = [
   {
@@ -63,9 +64,9 @@ const Feedback = () => {
   return (
     <div className="w-full relative py-24 bg-white overflow-hidden">
       {/* Background Image */}
-      <img
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        src="https://theme9.nisharindia.in/assets/images/update-10-02-2023/shapes/testimonial-five-shape-1.png"
+      <Image
+        className="absolute inset-0 w-full h-full object-containt z-0"
+        src={BackgroundImage}
         alt="background"
       />
 
@@ -99,29 +100,31 @@ const Feedback = () => {
             <SwiperSlide key={index}>
               <div className="w-full max-w-[370px] mx-auto flex flex-col items-center relative group transition-all duration-300">
                 {/* Card */}
-                <div className="relative bg-white group-hover:bg-bgbluecolor rounded-[16px] shadow-xl px-6 py-6 pt-8 w-full min-h-[311px] text-center transition-all duration-300">
-                  <div className="bg-primary inline-block px-12 py-3 rounded-md mb-4">
+                <div className="relative bg-white group-hover:bg-primary group-hover:opacity-80 rounded-[16px] shadow-xl px-6 py-6 pt-8 w-full min-h-[311px] text-center transition-all duration-300">
+                  <div className=" inline-block px-12 py-3 rounded-md mb-4">
                     <div className="flex gap-1 text-white justify-center">
                       {Array(item.rating).fill(0).map((_, i) => (
-                        <FaStar key={i} className="h-5 w-5" />
+                        <FaStar key={i} className="h-5 w-5 text-[#99FEAC]" />
                       ))}
                     </div>
                   </div>
                   <p className="text-[15px] leading-relaxed text-textsecondry group-hover:text-white transition-all duration-300">
                     “{item.feedback}”
                   </p>
-                  <div className="absolute left-1/2 -bottom-[10px] transform -translate-x-1/3 w-7 h-7 bg-white group-hover:bg-bgbluecolor rotate-45 z-0 transition-all duration-300"></div>
+                  <div className="absolute left-1/2 -bottom-[10px] transform -translate-x-1/3 w-7 h-7 bg-white group-hover:bg-primary rotate-45 z-0 transition-all duration-300"></div>
                 </div>
 
                 {/* Profile Info */}
                 <div className="mt-[30px] flex flex-col items-center transition-all duration-300">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    width={85}
-                    height={85}
-                    className="rounded-full border-[6px] border-[#f3f3f3] group-hover:border-bgbluecolor shadow-md transition-all duration-300"
-                  />
+               <div className="rounded-full border-[6px] border-[#f3f3f3] group-hover:border-primary group-hover:opacity-70 transition-all duration-300">
+  <img
+    src={item.image}
+    alt={item.name}
+    width={85}
+    height={85}
+    className="rounded-full"
+  />
+  </div>
                   <p className="text-[12px] text-textsecondry mt-2 tracking-widest">
                     {item.title}
                   </p>

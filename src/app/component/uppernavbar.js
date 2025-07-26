@@ -124,9 +124,10 @@ const UpperNavbar = () => {
             <div className="h-10 w-10 flex items-center justify-center">
               <IoSearchOutline />
             </div>
-            <button className="bg-primary px-[40px] py-[16px] rounded-full text-white text-[13px] font-semibold hover:bg-black transition">
+        <Link href="/contactUs">
+            <button className="bgclo1 px-[40px] py-[16px] rounded-full text-white text-[13px] font-semibold hover:bg-black transition">
               GET A QUOTE
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>

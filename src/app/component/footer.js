@@ -27,9 +27,9 @@ const Footer = () => {
             MoneyBugs is a one-stop that offer customers a wide range of Risk
             management and Investment solution products under one roof.
           </p>
-          <button className="bg-primary w-44 py-3 rounded-full text-white text-sm font-semibold hover:bg-white hover:text-primary transition">
+       <Link href="/contactUs">   <button className="bgclo1 w-44 py-3 rounded-full text-white text-sm font-semibold  transition">
             GET A QUOTE
-          </button>
+          </button></Link>
         </div>
 
         {/* Links */}
@@ -60,17 +60,20 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-white">Contact</h3>
           <div className="flex flex-col gap-4 text-sm text-texthearder">
             <div className="flex items-center gap-2">
-              <FaSquarePhone className="text-primary h-5 w-5" />
-              888 999 0000
+              <FaSquarePhone className="text-white h-5 w-5" />
+             +91 97550 40311
             </div>
             <div className="flex items-center gap-2">
-              <MdEmail className="text-primary h-5 w-5" />
-              needhelp@insur.com
+              <MdEmail className="text-white h-5 w-5" />
+              contact@moneybugs.in
             </div>
-            <div className="flex items-start gap-2">
-              <IoLocationSharp className="text-primary h-5 w-5" />
-              <span>30 road, broklyn street new york 600</span>
-            </div>
+          <div className="flex items-start gap-2">
+     <div> <IoLocationSharp className="text-white h-5 w-5 mt-1" /></div>
+    <div>
+              ll, office 4th floor, 119 36-A, Narmadapuram Rd, behind Royal Enfield Showroom, Vidya Nagar, Bhopal, Madhya Pradesh 462026
+
+    </div>
+    </div>
           </div>
         </div>
       </div>

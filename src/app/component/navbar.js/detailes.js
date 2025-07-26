@@ -14,11 +14,11 @@ const upernavitems = [
 
 const Detailes = ({ flexf = '', textsi = '' }) => {
   return (
-    <div className={`flex gap-3 ${flexf} text-[#84898c] ${textsi}`}>
+    <div className={`flex gap-3 ${flexf} text-white ${textsi}`}>
       {upernavitems.map((item, ind) => (
         <div key={ind} className="flex gap-1 items-center">
           <item.Icon className="w-4 h-4 text-white" />
-          <span>{item.label}</span>
+          <span className='font-semibold'>{item.label}</span>
         </div>
       ))}
     </div>

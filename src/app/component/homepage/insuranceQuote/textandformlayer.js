@@ -86,7 +86,7 @@ to Get Started</h1>
             </div>
             <div>
               <p className='text-sm text-textsecondry'>Facing problem to get a quote?</p>
-              <p className='font-semibold text-lg'>+92 (8800) 0000</p>
+              <p className='font-semibold text-lg'>+91 97550 40311</p>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@ to Get Started</h1>
 
           <button
             type='submit'
-            className='bg-primary w-[50%] text-white py-4 mt-4 rounded-full font-semibold hover:bg-red-600 transition-all duration-300'
+            className='bgclo1 w-[50%] text-white py-4 mt-4 rounded-full font-semibold hover:bg-[#99FEAC] transition-all duration-300'
           >
             GET A QUOTE NOW
           </button>

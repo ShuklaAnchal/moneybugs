@@ -21,7 +21,7 @@ const CircleProgress = ({ percentage, label }) => {
           cy={radius}
         />
         <circle
-          stroke="#ff7043"
+          stroke="#99FEAC"
           fill="transparent"
           strokeWidth={stroke}
           strokeDasharray={circumference}
@@ -37,7 +37,7 @@ const CircleProgress = ({ percentage, label }) => {
           y="50%"
           dominantBaseline="middle"
           textAnchor="middle"
-          fill="#ff4d4d"
+          fill="#0EB09E"
           fontSize="16"
           fontWeight="bold"
         >
@@ -54,7 +54,7 @@ const Right = () => {
   return (
     <div className="lg:w-[40%] w-full h-full flex justify-start items-start">
       <div className='flex flex-col gap-4'>
-        <p className="text-[16px] text-secondryinsurance">Welcome to Insur</p>
+        <p className="text-[16px] text-primary">Welcome to Moneybugs</p>
         <h1 className="text-[45px] font-semibold leading-[47px]">
           We’re Providing Best Insurance Policy
         </h1>

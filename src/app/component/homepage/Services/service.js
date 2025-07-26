@@ -79,7 +79,7 @@ const service = () => {
   return (
     <div className="h-[90vh] w-full flex justify-center relative">
       <div className="lg:h-[80vh] h-auto lg:w-[90%] w-full absolute lg:top-[-20%] top-[0] z-[20] ">
-        <div className="w-full h-[70%] bg-white lg:shadow shadow-none rounded-[16px] flex flex-col text-center ">
+        <div className="w-full h-[70%] bg-white lg:shadow-xl shadow-none rounded-[16px] flex flex-col text-center ">
           <div className="flex flex-col leading-[45px] mt-14">
             <p className="text-[16px] text-textsecondry">Our Top Services</p>
             <h1 className="lg:text-[45px] md:text-[30px] text-[25px] font-bold ">
@@ -91,7 +91,7 @@ const service = () => {
           </div>
           <div className="lg:px-[6rem] px-3 lg:mt-[90px] mt-[30px] lg:mb-0 mb-[20px] z-[50]">
             <Swiper
-              className="overflow-y-auto h-80 custom-swiper"
+              className="overflow-y-auto h-[400px] custom-swiper"
               modules={[Pagination, Autoplay, EffectCoverflow]}
               spaceBetween={20}
               slidesPerView={1}
@@ -112,19 +112,19 @@ const service = () => {
                     />
 
                     {/* Default Bottom Panel */}
-                    <div className="z-[50] bg-white absolute left-1/2 transform -translate-x-1/2 bottom-[-9px] w-[76%] rounded-lg py-2 flex flex-col items-center shadow group-hover:opacity-0 transition duration-300">
-                      <div className="w-12 h-12 rounded-full bg-btnsecondcolor text-white flex items-center justify-center text-xl relative bottom-[62%]">
+                    <div className="z-[50] bg-white absolute left-1/2 transform -translate-x-1/2 bottom-[-40px] w-[76%] rounded-lg py-3 flex flex-col items-center shadow group-hover:opacity-0 transition duration-300">
+                      <div className="w-12 h-12 rounded-full bg-btnsecondcolor text-white flex items-center justify-center text-xl relative bottom-[65%]">
                         {item.icon}
                       </div>
-                      <p className="text-center text-black font-semibold">
+                      <p className="text-center text-black font-semibold mt-3">
                         {item.title}
                       </p>
                     </div>
 
                     {/* Hover Overlay */}
                     <div className="absolute rounded-[16px] inset-0 bg-primary bg-opacity-80 text-white p-5 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center">
-                      <div className="text-4xl mb-2">{item.icon}</div>
-                      <h3 className="font-bold text-xl mb-2">{item.title}</h3>
+                      <div className="text-4xl mb-4">{item.icon}</div>
+                      <h3 className="font-bold text-xl mb-2 ">{item.title}</h3>
                       <p className="text-sm">{item.description}</p>
                     </div>
                   </div>

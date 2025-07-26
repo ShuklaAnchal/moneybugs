@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import Uppernavbar from "@/app/component/uppernavbar";
@@ -18,6 +19,13 @@ import Footer from "@/app/component/footer"
 
 
 const MaindashboardPage = () => {
+
+    const quoteRef = useRef(null);
+
+  const scrollToQuote = () => {
+    quoteRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
       <div className="relative lg:h-[110vh] h-auto w-full overflow-hidden">
@@ -34,17 +42,19 @@ const MaindashboardPage = () => {
       {/* Upper Navbar */}
       <div className="relative z-10">
         <Uppernavbar />
-        <First />
+        <First onDiscoverClick={scrollToQuote} />
       </div>
     </div>
     <Services />
     <Welcomecom/>
-    <Quote />
+     <div ref={quoteRef}>
+        <Quote />
+      </div>
     <Teams />
     <Fundedcompanies />
-    <Opportunity />
+    <Opportunity onDiscoverClick={scrollToQuote} />
     <Feedback />
-    <NewsBolgs />
+    {/* <NewsBolgs /> */}
     {/* <Tracking /> */}
      <Footer />
      

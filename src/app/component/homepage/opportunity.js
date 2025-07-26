@@ -5,7 +5,7 @@ import BackgroundImage from "@/icons/main/oppbg.jpg";
 import { FaHandSparkles } from "react-icons/fa";
 import { GiNotebook, GiTakeMyMoney } from "react-icons/gi";
 
-const opportunity = () => {
+const opportunity = ({onDiscoverClick}) => {
   const cardItems = [
     {
       id: 1,
@@ -33,9 +33,7 @@ const opportunity = () => {
         subtitle="Why Trust Us"
         heading="Empowering You to Succeed Online"
         description="We tailor strategies that bring real business results through user-centric design and thoughtful technology."
-        buttonBgColor="bg-btncolor"
-        buttonHoverColor="hover:bg-primary"
-        buttonTextColor="hover:text-white"
+        onClick={onDiscoverClick}
       />
       <Rightcom
         cardData={cardItems}

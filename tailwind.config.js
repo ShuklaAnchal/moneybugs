@@ -26,7 +26,7 @@ module.exports = {
         },
       },
       colors: {
-        primary: "#65A69C",
+        primary: "#0EB09E",
         insurancebackground:"#e7f7f5",
         secondryinsurance:"#091E3C",
         texthearder: "#83888B",
@@ -34,7 +34,7 @@ module.exports = {
         textinsu:"#102450",
         bgbluecolor:"#262E8B",
         btncolor:"#846B88",
-        btnsecondcolor:"#ff7043"
+        btnsecondcolor:"#0EB09E"
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

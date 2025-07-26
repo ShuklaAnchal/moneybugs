@@ -26,7 +26,7 @@ const RightCom = ({
           >
             {/* Icon + Title */}
             <div className="flex items-center gap-3 md:gap-4 w-full md:w-[50%] mb-4 md:mb-0">
-              <div className="text-bgbluecolor text-[35px] sm:text-[40px] md:text-[50px]">
+              <div className="text-primary text-[35px] sm:text-[40px] md:text-[50px]">
                 {item.icon}
               </div>
               <div className="font-semibold text-[18px] text-black leading-tight">
