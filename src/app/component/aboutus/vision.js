@@ -56,10 +56,10 @@ const ApproachSection = () => {
       case "value":
         return (
           <div className="text-left">
-            <h3 className="text-xl font-bold text-green-900 mb-6">
+            <h3 className="text-xl font-bold text-primary mb-6">
               Our Core Values
             </h3>
-            <ul className="space-y-4 text-green-700 font-medium">
+            <ul className="space-y-4 text-primary font-medium">
               <li className="flex items-center gap-2">
                 <span className="text-primary">🌿</span> Integrity and Honesty
               </li>

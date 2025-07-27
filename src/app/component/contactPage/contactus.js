@@ -1,78 +1,120 @@
-import React from 'react';
-import Map from './map';
-import Social from '@/app/component/navbar.js/social';
-import Claimcard from '../claimcard';
-import ContactForm from './contactForm'
-import ContactBackground from "@/icons/contact/contactbg.jpg"
+import React from "react";
+import Map from "./map";
+import Social from "@/app/component/navbar.js/social";
+import Claimcard from "../claimcard";
+import ContactForm from "./contactForm";
+import ContactImage from "@/icons/contact/contactbg.jpg";
+import PageBackground from "@/icons/pagebackground.jpg";
 
-import { MdEmail } from 'react-icons/md';
-import { FaSquarePhone } from 'react-icons/fa6';
-import { IoLocationSharp } from 'react-icons/io5';
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail, MdLocationOn } from "react-icons/md";
+
+import Image from "next/image";
 
 const ContactUs = () => {
   return (
-    <div className="flex flex-col py-10 bg-center">
-      
-      {/* Hero Section */}
-     <div>
-       <div className="min-h-[40vh] w-full flex flex-col justify-center items-center py-5 px-4 text-center">
-        <h1 className="text-[32px] md:text-[40px] lg:text-[45px] font-bold text-primary">
-          Contact Us
-        </h1>
-        <p className="text-[14px] md:text-[16px] text-textsecondry max-w-3xl mt-3">
-          Get in touch with us for expert insurance guidance and seamless support. Whether you need policy assistance, claims help, or expert consultation, our team is ready to assist you. Reach out today!
-        </p>
+    <div className="flex flex-col py-10 bg-center relative">
+      {/* Background */}
+      <div className="absolute top-0 left-0 w-full h-[75vh] z-0">
+        <Image
+          src={PageBackground}
+          alt="page background"
+          className="w-full h-full object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-primary bg-opacity-35 z-10 h-full" />
       </div>
 
-      {/* Contact Info + Form */}
-      <div className="flex flex-col lg:flex-row md:flex-row justify-between lg:items-start md:lg:items-start items-center lg:container md:container mx-auto px-3 py-16 gap-10">
-        {/* Left Side - Contact Info */}
-        <div className="flex flex-col w-full lg:w-1/2 gap-5">
-          <h2 className="text-[24px] md:text-[30px] font-bold text-black">
-            Get In Touch
-          </h2>
-          <p className="text-[14px] md:text-[16px] text-textsecondry max-w-xl">
-            Get in touch with us for expert insurance guidance and seamless support. Whether you need policy assistance, claims help, or expert consultation, our team is ready to assist you. Reach out today!
+      {/* Top Header Content */}
+      <div className="relative z-20">
+        <div className="h-[75vh] flex flex-col items-center justify-center text-white text-center px-4">
+          <h1 className="text-2xl sm:text-3xl font-bold">Contact Us</h1>
+          <p className="text-lg sm:text-2xl font-medium">
+            We are Bhopal's Leading Insurance Consultancy
           </p>
-
-          <div className="flex flex-col gap-4 text-sm text-texthearder">
-            <div className="flex items-center gap-2">
-              <FaSquarePhone className="text-primary h-5 w-5" />
-              888 999 0000
-            </div>
-            <div className="flex items-center gap-2">
-              <MdEmail className="text-primary h-5 w-5" />
-              needhelp@insur.com
-            </div>
-            <div className="flex items-start gap-2">
-              <IoLocationSharp className="text-primary h-5 w-5 mt-1" />
-              <span>30 road, Broklyn Street, New York 600</span>
-            </div>
-          </div>
-
-          {/* Social Media */}
-          <div className="border-t border-gray-300 pt-5">
-            <h3 className="text-[20px] md:text-[25px] font-bold text-black mb-3">
-              Follow Us:
-            </h3>
-            <Social iconcolor="text-primary" />
-          </div>
-        </div>
-
-        {/* Right Side - Form */}
-        <div className="px-10">
-        <ContactForm />
+          <p className="text-[16px] font-medium w-full sm:w-[80%] md:w-[70%] lg:w-[45%]">
+            Get in touch with us for expert insurance guidance and seamless
+            support. Whether you need policy assistance, claims help, or expert
+            consultation, our team is ready to assist you. Reach out today!
+          </p>
         </div>
       </div>
-     </div>
 
-      {/* Map Section */}
-      <div className="w-full flex justify-center items-center py-10 mb-14 px-4">
+      {/* Contact Info + Form Section */}
+      <div className="bg-[#edf2f3] py-16 px-4 sm:px-6 lg:px-10">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10 max-w-screen-xl mx-auto w-full">
+          {/* Left Side */}
+          <section className="w-full lg:w-1/2">
+            {/* Heading */}
+            <div className="text-start mb-10">
+              <p className="text-sm font-medium text-[#0EB09E] tracking-wider uppercase mb-2">
+                Contact Us
+              </p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-5">
+                Personalized <span className="text-black font-bold">insurance</span> support
+                <br />
+                and assistance today
+              </h2>
+              <p className="text-gray-600 text-[16px]">
+                Reach out to our team for tailored insurance solutions, expert
+                advice, and prompt assistance with all your coverage needs.
+              </p>
+            </div>
+
+            {/* Contact Card */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl w-full">
+              <div className="relative w-full h-[420px] sm:h-[380px]">
+                <Image
+                  src={ContactImage}
+                  alt="Support Agent"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-primary opacity-40" />
+
+                <div className="absolute inset-0 flex flex-col justify-center px-6 text-white space-y-6 z-10">
+                  <div className="flex items-start gap-4">
+                    <FaPhoneAlt className="text-xl sm:text-2xl mt-1" />
+                    <div>
+                      <p className="text-sm">Contact Number:</p>
+                      <p className="text-lg font-semibold">+01 789 852 654</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <MdEmail className="text-xl sm:text-2xl mt-1" />
+                    <div>
+                      <p className="text-sm">Email:</p>
+                      <p className="text-lg font-semibold">support@domain.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div><MdLocationOn className="text-xl sm:text-2xl mt-1" /></div>
+                    <div>
+                      <p className="text-sm">Location:</p>
+                      <p className="text-lg font-semibold">
+                        ll, office 4th floor, 119 (36-A, Narmadapuram Rd, behind Royal Enfield Showroom, Vidya Nagar, Bhopal, Madhya Pradesh 462026
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Right Side - Form */}
+          <div className="w-full lg:w-1/2">
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+
+      {/* Map */}
+      <div className="w-full flex justify-center items-center lg:py-10 md:py-8 py-3 px-4 lg:mb-14 md:mb-12 mb-8">
         <Map />
       </div>
 
       {/* Claim Cards */}
-      <div className="px-3">
+      <div className="px-4">
         <Claimcard />
       </div>
     </div>

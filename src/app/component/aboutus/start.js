@@ -6,11 +6,10 @@ import teamImage from "@/icons/about/diss.jpeg";
 import laptopImage from "@/icons/about/insu.jpg";
 import familyImage from "@/icons/about/family.jpg";
 import PageBackground from "@/icons/pagebackground.jpg";
-import Vision from "./vision"
+import Vision from "./vision";
 
 const AboutUs = () => {
-
-   const steps = [
+  const steps = [
     {
       title: "1. Compare",
       description:
@@ -28,11 +27,10 @@ const AboutUs = () => {
     },
   ];
 
-
   return (
     <div className="relative w-full">
       {/* Fixed Background Image */}
-     <div className="absolute top-0 left-0 w-full h-[85vh] z-0">
+      <div className="absolute top-0 left-0 w-full h-[85vh] z-0">
         <Image
           src={PageBackground}
           alt="page background"
@@ -51,32 +49,38 @@ const AboutUs = () => {
           <p className="text-2xl font-medium mt-1">
             We are Bhopal's Leading Insurance Consultancy
           </p>
+          <p className="text-[16px]">
+            {" "}
+            Lorem ipsum dolor sit am adipi we help you ensure everyone is in the
+            right
+          </p>
         </div>
 
         {/* Main About Section */}
         <section className="bg-white text-gray-800 px-0 md:px-10 py-8 relative z-20">
+          <Vision />
 
-     <Vision />
-        
-            <section className="py-20 px-4 md:px-10 bg-white">
-      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
-        The Way We Work
-      </h2>
+          <section className="py-20 px-4 md:px-10 bg-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+              The Way We Work
+            </h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {steps.map((item, index) => (
-          <div
-            key={index}
-            className="border border-gray-200 p-6 rounded-tr-[30px] rounded-bl-[30px] shadow-sm"
-          >
-            <h4 className="text-lg font-bold text-primary mb-2">
-              {item.title}
-            </h4>
-            <p className="text-textsecondry text-sm">{item.description}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {steps.map((item, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-200 p-6 rounded-tr-[30px] rounded-bl-[30px] shadow-sm"
+                >
+                  <h4 className="text-lg font-bold text-primary mb-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-textsecondry text-sm">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
           {/* Why Choose Us */}
           <div className="bg-[#f7faff] py-16">
             <div className="lg:px-0 md:px-0 px-3 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -128,13 +132,13 @@ const AboutUs = () => {
             <p className="text-textsecondry text-lg">
               At Money Bugs, our commitment goes beyond selling policies. We aim
               to educate and empower individuals and businesses to make the best
-              insurance choices. Whether you need health, vehicle, life, or travel
-              insurance, our team ensures unmatched support and satisfaction.
+              insurance choices. Whether you need health, vehicle, life, or
+              travel insurance, our team ensures unmatched support and
+              satisfaction.
             </p>
           </div>
         </section>
       </div>
-
     </div>
   );
 };

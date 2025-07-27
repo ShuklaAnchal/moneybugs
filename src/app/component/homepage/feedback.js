@@ -1,6 +1,6 @@
 "use client";
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
@@ -15,7 +15,7 @@ const testimonials = [
       "All of our lorries are fitted with Satellite Tracking and Temperature Controlled monitoring systems so that the transportation of high value and temperature sensitive loads can be monitored at all times.",
     rating: 5,
   },
-    {
+  {
     name: "Devid Couper",
     title: "CO FOUNDER",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
@@ -23,7 +23,7 @@ const testimonials = [
       "All of our lorries are fitted with Satellite Tracking and Temperature Controlled monitoring systems so that the transportation of high value and temperature sensitive loads can be monitored at all times.",
     rating: 5,
   },
-    {
+  {
     name: "Devid Couper",
     title: "CO FOUNDER",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
@@ -31,7 +31,7 @@ const testimonials = [
       "All of our lorries are fitted with Satellite Tracking and Temperature Controlled monitoring systems so that the transportation of high value and temperature sensitive loads can be monitored at all times.",
     rating: 5,
   },
-    {
+  {
     name: "Devid Couper",
     title: "CO FOUNDER",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
@@ -39,7 +39,7 @@ const testimonials = [
       "All of our lorries are fitted with Satellite Tracking and Temperature Controlled monitoring systems so that the transportation of high value and temperature sensitive loads can be monitored at all times.",
     rating: 5,
   },
-{
+  {
     name: "Devid Couper",
     title: "CO FOUNDER",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
@@ -57,8 +57,6 @@ const testimonials = [
   },
   // Add more testimonials as needed
 ];
-
-
 
 const Feedback = () => {
   return (
@@ -78,24 +76,24 @@ const Feedback = () => {
         </h1>
 
         {/* Swiper */}
-       <Swiper
-  modules={[Pagination, EffectCoverflow]}
-  spaceBetween={28}
-  grabCursor={true}
-  centeredSlides={true}
-  loop={true}
-  autoplay={{ delay: 5000 }}
-//   pagination={{ clickable: true }}
-  slidesPerView={1} // default (mobile)
-  breakpoints={{
-    768: {
-      slidesPerView: 2, // for tablets and up
-    },
-    1024: {
-      slidesPerView: 3, // for desktop and up
-    },
-  }}
->
+        <Swiper
+          modules={[Pagination, EffectCoverflow]}
+          spaceBetween={28}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          autoplay={{ delay: 5000 }}
+          //   pagination={{ clickable: true }}
+          slidesPerView={1} // default (mobile)
+          breakpoints={{
+            768: {
+              slidesPerView: 2, // for tablets and up
+            },
+            1024: {
+              slidesPerView: 3, // for desktop and up
+            },
+          }}
+        >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="w-full max-w-[370px] mx-auto flex flex-col items-center relative group transition-all duration-300">
@@ -103,9 +101,11 @@ const Feedback = () => {
                 <div className="relative bg-white group-hover:bg-primary group-hover:opacity-80 rounded-[16px] shadow-xl px-6 py-6 pt-8 w-full min-h-[311px] text-center transition-all duration-300">
                   <div className=" inline-block px-12 py-3 rounded-md mb-4">
                     <div className="flex gap-1 text-white justify-center">
-                      {Array(item.rating).fill(0).map((_, i) => (
-                        <FaStar key={i} className="h-5 w-5 text-[#FFD700]" />
-                      ))}
+                      {Array(item.rating)
+                        .fill(0)
+                        .map((_, i) => (
+                          <FaStar key={i} className="h-5 w-5 text-[#FFD700]" />
+                        ))}
                     </div>
                   </div>
                   <p className="text-[15px] leading-relaxed text-textsecondry group-hover:text-white transition-all duration-300">
@@ -116,15 +116,15 @@ const Feedback = () => {
 
                 {/* Profile Info */}
                 <div className="mt-[30px] flex flex-col items-center transition-all duration-300">
-               <div className="rounded-full border-[6px] border-[#f3f3f3] group-hover:border-primary group-hover:opacity-70 transition-all duration-300">
-  <img
-    src={item.image}
-    alt={item.name}
-    width={85}
-    height={85}
-    className="rounded-full"
-  />
-  </div>
+                  <div className="rounded-full border-[6px] border-[#f3f3f3] group-hover:border-primary group-hover:opacity-70 transition-all duration-300">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      width={85}
+                      height={85}
+                      className="rounded-full"
+                    />
+                  </div>
                   <p className="text-[12px] text-textsecondry mt-2 tracking-widest">
                     {item.title}
                   </p>
