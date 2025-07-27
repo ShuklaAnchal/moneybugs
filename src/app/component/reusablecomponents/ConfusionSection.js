@@ -59,7 +59,7 @@ const ConfusionSection = ({
                 ></textarea>
                 <button
                   type="submit"
-                  className="bg-[#FF6A00] hover:bg-orange-600 text-white text-sm font-medium px-4 py-3 rounded-full transition mt-2"
+                  className="bg-primary hover:bg-orange-600 text-white text-sm font-medium px-4 py-3 rounded-full transition mt-2"
                 >
                   Submit
                 </button>

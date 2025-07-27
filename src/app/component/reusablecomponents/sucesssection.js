@@ -15,7 +15,7 @@ const SuccessSection = ({
         {/* Text Content */}
         <div className="w-full md:w-1/2">
           {tagline && (
-            <p className="text-sm text-blue-600 font-medium mb-2">{tagline}</p>
+            <p className="text-sm text-primary font-medium mb-2">{tagline}</p>
           )}
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
             {heading}
@@ -29,7 +29,7 @@ const SuccessSection = ({
           {buttonText && (
             <button
               onClick={onButtonClick}
-              className="bg-blue-200 px-8 py-3 rounded-full"
+              className="bg-primary px-8 py-3 rounded-full text-white font-semibold"
             >
               {buttonText}
             </button>
@@ -50,7 +50,7 @@ const SuccessSection = ({
 
         {/* Card Content */}
         <div className="ml-6 md:ml-8 bg-white rounded-2xl py-4 px-10 shadow-md w-full">
-          <div className="text-blue-600 text-2xl mb-2">{stat.icon}</div>
+          <div className="text-primary text-2xl mb-2">{stat.icon}</div>
           <h3 className="text-xl font-bold text-gray-900">{stat.value}</h3>
           <p className="text-gray-600 text-sm">{stat.label}</p>
         </div>
