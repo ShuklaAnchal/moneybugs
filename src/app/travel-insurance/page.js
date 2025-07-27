@@ -3,7 +3,7 @@ import React from "react";
 
 import Uppernavbar from "@/app/component/uppernavbar";
 import Footer from "@/app/component/footer";
-import Uppepart from "@/app/component/insurance/siptop";
+import Uppepart from "@/app/component/reusablecomponents/siptop";
 import WelcomeImage from "@/icons/main/welcome.jpg";
 import Health from "@/icons/health/health-insurance.jpg";
 import Leftcom from "@/app/component/homepage/opportunitycomponents.js/leftcom";
@@ -13,9 +13,9 @@ import { GrUserManager } from "react-icons/gr";
 import { FaHandHoldingHand } from "react-icons/fa6";
 import { TbHomeCog } from "react-icons/tb";
 import { FaUserShield, FaSmile, FaChartLine } from "react-icons/fa";
-import SupportCard from "@/app/component/insurance/supportcard";
-import SuccessSection from "../component/insurance/sucesssection";
-import ConfusionSection from "@/app/component/insurance/ConfusionSection";
+import SupportCard from "@/app/component/reusablecomponents/supportcard";
+import SuccessSection from "../component/reusablecomponents/sucesssection";
+import ConfusionSection from "@/app/component/reusablecomponents/ConfusionSection";
 
 import TravalImage from "@/icons/traval/traval-insu.jpg";
 import Travalsecondimage from "@/icons/traval/travel-insu1.jpg";

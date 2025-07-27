@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import officeImage from "@/icons/about/office.jpg";
-import teamImage from "@/icons/about/diss.jpeg";
-import laptopImage from "@/icons/about/insu.jpg";
+import HeroSection from "../reusablecomponents/maincard"
 import familyImage from "@/icons/about/family.jpg";
 import PageBackground from "@/icons/pagebackground.jpg";
 import Vision from "./vision";
@@ -29,33 +27,14 @@ const AboutUs = () => {
 
   return (
     <div className="relative w-full">
-      {/* Fixed Background Image */}
-      <div className="absolute top-0 left-0 w-full h-[85vh] z-0">
-        <Image
-          src={PageBackground}
-          alt="page background"
-          className="w-full h-full object-cover"
-          priority
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-primary bg-opacity-35 z-10 h-full" />
-      </div>
+   <HeroSection
+  title="About Us"
+  subtitle="We are Bhopal's Leading Insurance Consultancy"
+  description="Lorem ipsum dolor sit am adipi we help you ensure everyone is in the right"
+/>
 
       {/* Content over background */}
       <div className="relative z-20">
-        {/* Top content centered over fixed background */}
-        <div className="h-[75vh] flex flex-col items-center justify-center text-white text-center px-4">
-          <h1 className="text-3xl font-bold mt-16">About Us</h1>
-          <p className="text-2xl font-medium mt-1">
-            We are Bhopal's Leading Insurance Consultancy
-          </p>
-          <p className="text-[16px]">
-            {" "}
-            Lorem ipsum dolor sit am adipi we help you ensure everyone is in the
-            right
-          </p>
-        </div>
-
         {/* Main About Section */}
         <section className="bg-white text-gray-800 px-0 md:px-10 py-8 relative z-20">
           <Vision />

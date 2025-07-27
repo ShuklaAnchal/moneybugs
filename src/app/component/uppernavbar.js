@@ -123,9 +123,6 @@ const UpperNavbar = ({ showTop = false }) => {
 
             {/* Right Buttons (Desktop only) */}
             <div className="hidden md:flex gap-2 items-center">
-              <div className="h-10 w-10 flex items-center justify-center">
-                <IoSearchOutline />
-              </div>
               <Link href="/contactUs">
                 <button className="bgclo1 px-[40px] py-[16px] rounded-full text-white text-[13px] font-semibold hover:bg-black transition">
                   GET A QUOTE

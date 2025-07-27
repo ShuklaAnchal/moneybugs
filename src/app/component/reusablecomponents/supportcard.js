@@ -14,7 +14,7 @@
           {cards.map((item, index) => (
             <div
               key={index}
-              className="bg-bgbluecolor text-center flex flex-col items-center text-white rounded-2xl py-8 px-5 flex flex-col h-full shadow-md hover:shadow-lg transition duration-300"
+              className="bg-primary text-center flex flex-col items-center text-white  rounded-tr-[20px] rounded-bl-[20px] py-8 px-5 flex flex-col h-full shadow-md hover:shadow-lg transition duration-300"
             >
               <div className="text-[35px] mb-2">{item.icons}</div>
               <h3 className="text-lg md:text-xl font-bold">{item.title}</h3>

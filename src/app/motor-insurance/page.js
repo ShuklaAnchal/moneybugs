@@ -3,7 +3,7 @@ import React from "react";
 
 import Uppernavbar from "@/app/component/uppernavbar";
 import Footer from "@/app/component/footer";
-import Uppepart from "@/app/component/insurance/upperpart";
+import Uppepart from "@/app/component/reusablecomponents/upperpart";
 import Health from "@/icons/health/health-insurance.jpg"
 import Leftcom from "@/app/component/homepage/opportunitycomponents.js/leftcom";
 import Rightcom from "@/app/component/homepage/opportunitycomponents.js/rightcom";
@@ -12,9 +12,9 @@ import { GrUserManager } from "react-icons/gr";
 import { FaHandHoldingHand } from "react-icons/fa6";
 import { TbHomeCog } from "react-icons/tb";
 import { FaUserShield, FaSmile, FaChartLine } from "react-icons/fa";
-import SupportCard from "@/app/component/insurance/supportcard";
-import SuccessSection from "../component/insurance/sucesssection";
-import ConfusionSection from "@/app/component/insurance/ConfusionSection";
+import SupportCard from "@/app/component/reusablecomponents/supportcard";
+import SuccessSection from "../component/reusablecomponents/sucesssection";
+import ConfusionSection from "@/app/component/reusablecomponents/ConfusionSection";
 import InsuranceComparison from "@/app/component/motor/insuranceComparison"
 
 import MotorCard from "@/icons/motor/motorcycle.jpg"

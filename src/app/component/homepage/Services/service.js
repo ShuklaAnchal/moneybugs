@@ -77,7 +77,7 @@ const insuranceData = [
 
 const service = () => {
   return (
-    <div className="h-[90vh] w-full flex justify-center relative">
+    <div className="lg:h-[90vh] md:h-[90vh] h-[70vh] w-full flex justify-center relative ">
       <div className="lg:h-[80vh] h-auto lg:w-[90%] w-full absolute lg:top-[-20%] top-[0] z-[20] ">
         <div className="w-full h-[70%] bg-white lg:shadow-xl shadow-none rounded-[16px] flex flex-col text-center ">
           <div className="flex flex-col leading-[45px] mt-14">
