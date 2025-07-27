@@ -104,7 +104,7 @@ const Feedback = () => {
                   <div className=" inline-block px-12 py-3 rounded-md mb-4">
                     <div className="flex gap-1 text-white justify-center">
                       {Array(item.rating).fill(0).map((_, i) => (
-                        <FaStar key={i} className="h-5 w-5 text-[#99FEAC]" />
+                        <FaStar key={i} className="h-5 w-5 text-[#FFD700]" />
                       ))}
                     </div>
                   </div>
