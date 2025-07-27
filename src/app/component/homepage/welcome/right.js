@@ -21,7 +21,7 @@ const CircleProgress = ({ percentage, label }) => {
           cy={radius}
         />
         <circle
-          stroke="#99FEAC"
+          stroke="#0EB09E"
           fill="transparent"
           strokeWidth={stroke}
           strokeDasharray={circumference}

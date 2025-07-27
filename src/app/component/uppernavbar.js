@@ -7,7 +7,7 @@ import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoSearchOutline } from "react-icons/io5";
-
+import Topuppernav from "@/app/component/topuppernavbar";
 import Logo from "@/icons/moneybugs-logo.png";
 import Social from "@/app/component/navbar.js/social";
 
@@ -29,7 +29,7 @@ const navItems = [
   { label: "Contact Us", href: "/contactUs" },
 ];
 
-const UpperNavbar = () => {
+const UpperNavbar = ({ showTop = false }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
@@ -58,70 +58,80 @@ const UpperNavbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <div className="shadow relative z-[9999] w-full">
-      <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 bg-white fixed top-0 left-0 right-0 z-50">
-        <div className="h-[90px] flex justify-between items-center w-full">
-          {/* Logo */}
-          <Link href="/">
-            <div className="h-[60px] w-[120px]">
-              <Image
-                src={Logo}
-                alt="MoneyBugs Logo"
-                className="h-full w-full object-contain"
-              />
-            </div>
-          </Link>
+    <div className="relative z-[9999] w-full">
+      {/* This part scrolls away */}
+      {/* {showTop && (
+        <div className="w-full">
+          <Topuppernav />
+        </div>
+      )} */}
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex text-[18px] gap-12 font-normal text-[#797979] relative">
-            {navItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                {item.href ? (
-                  <Link href={item.href} className="cursor-pointer">
-                    {item.label}
-                  </Link>
-                ) : (
-                  <div className="cursor-pointer">{item.label}</div>
-                )}
-
-                {/* Dropdown */}
-                {item.dropdown && hoveredIndex === index && (
-                  <div className="absolute bg-white top-[30px] left-0 w-48 border rounded shadow-lg z-50 transition-all">
-                    {item.dropdown.map((subItem, subIndex) => (
-                      <Link
-                        key={subIndex}
-                        href={subItem.href}
-                        className="block px-6 py-3 hover:bg-gray-100 text-sm text-black"
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+      {/* This is sticky fixed navbar */}
+      <div className=" z-50 bg-white w-full shadow">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="h-[90px] flex justify-between items-center w-full">
+            {/* Logo */}
+            <Link href="/">
+              <div className="h-[60px] w-[120px]">
+                <Image
+                  src={Logo}
+                  alt="MoneyBugs Logo"
+                  className="h-full w-full object-contain"
+                />
               </div>
-            ))}
-          </div>
-
-          {/* Hamburger Menu */}
-          <button className="lg:hidden text-2xl" onClick={handleOpenMenu}>
-            <FiMenu className="hover:text-primary" />
-          </button>
-
-          {/* Right Buttons (desktop only) */}
-          <div className="hidden md:flex gap-2 items-center">
-            <div className="h-10 w-10 flex items-center justify-center">
-              <IoSearchOutline />
-            </div>
-            <Link href="/contactUs">
-              <button className="bgclo1 px-[40px] py-[16px] rounded-full text-white text-[13px] font-semibold hover:bg-black transition">
-                GET A QUOTE
-              </button>
             </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex text-[18px] gap-12 font-normal text-[#797979] relative">
+              {navItems.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  {item.href ? (
+                    <Link href={item.href} className="cursor-pointer">
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <div className="cursor-pointer">{item.label}</div>
+                  )}
+
+                  {/* Dropdown */}
+                  {item.dropdown && hoveredIndex === index && (
+                    <div className="absolute bg-white top-[30px] left-0 w-48 border rounded shadow-lg z-50 transition-all">
+                      {item.dropdown.map((subItem, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={subItem.href}
+                          className="block px-6 py-3 hover:bg-gray-100 text-sm text-black"
+                        >
+                          {subItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Hamburger Icon */}
+            <button className="lg:hidden text-2xl" onClick={handleOpenMenu}>
+              <FiMenu className="hover:text-primary" />
+            </button>
+
+            {/* Right Buttons (Desktop only) */}
+            <div className="hidden md:flex gap-2 items-center">
+              <div className="h-10 w-10 flex items-center justify-center">
+                <IoSearchOutline />
+              </div>
+              <Link href="/contactUs">
+                <button className="bgclo1 px-[40px] py-[16px] rounded-full text-white text-[13px] font-semibold hover:bg-black transition">
+                  GET A QUOTE
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -129,13 +139,11 @@ const UpperNavbar = () => {
       {/* Mobile Sidebar */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-[999]">
-          {/* Overlay */}
           <div
             className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"
             onClick={handleCloseMenu}
           ></div>
 
-          {/* Sidebar */}
           <div className="fixed top-0 left-0 h-full w-[85%] max-w-[300px] bg-black text-white shadow-lg p-4 overflow-y-auto transition-all duration-300 ease-in-out">
             <div className="flex justify-between items-center border-b border-white/20 pb-8 mt-3">
               <div className="w-[140px]">
@@ -146,7 +154,6 @@ const UpperNavbar = () => {
               </button>
             </div>
 
-            {/* Menu Items */}
             <div className="flex flex-col text-[14px]">
               {navItems.map((item, index) => (
                 <div key={index}>
@@ -178,7 +185,6 @@ const UpperNavbar = () => {
                         </span>
                       </div>
 
-                      {/* Dropdown Items */}
                       {item.dropdown && openDropdownIndex === index && (
                         <div className="ml-4 mt-2 pl-2 border-l border-white/10 flex flex-col gap-2">
                           {item.dropdown.map((subItem, subIndex) => (

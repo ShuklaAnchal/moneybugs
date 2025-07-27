@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 
 import Uppernavbar from "@/app/component/uppernavbar";
+
 import BackgroundImage from "@/icons/main/main-bg.jpg";
 import First from "@/app/component/homepage/first";
 import Services from "@/app/component/homepage/Services/service"
@@ -41,7 +42,7 @@ const MaindashboardPage = () => {
 
       {/* Upper Navbar */}
       <div className="relative z-10">
-        <Uppernavbar />
+        <Uppernavbar showTop={true} />
         <First onDiscoverClick={scrollToQuote} />
       </div>
     </div>

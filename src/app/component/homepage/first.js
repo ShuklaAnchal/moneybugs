@@ -7,7 +7,7 @@ const first = ({onDiscoverClick }) => {
   return (
     <div className="flex lg:pl-[10rem] pl-[2rem]">
       <div className="flex flex-col lg:w-[43%] w-full gap-7 mt-[70px]  lg:mb-0 mb-[70px] ">
-        <h1 className="lg:text-[70px] text-[35px] font-semibold lg:leading-[1] leading-[1.5] lg:w-full w-[60%]">
+        <h1 className="lg:text-[70px] text-[35px] font-semibold mt-16 leading-[1] lg:w-full w-[60%]">
           Secure Your Future With Insur Insurance
         </h1>
         <p className="lg:w-full w-[70%] text-texthearder">
