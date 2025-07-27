@@ -6,7 +6,7 @@ const discoverbtn = ({bgcolor, onClick}) => {
          <div>
           <button onClick={onClick}  className={`${
           bgcolor ? bgcolor : 'bgclo1'
-        }  text-white  px-14 py-4 text-[16px] font-semibold rounded-full `}>
+        }  text-white  px-14 py-4 text-[16px] font-semibold rounded-full hover:bg-black`}>
             Discover More
           </button>
         </div>

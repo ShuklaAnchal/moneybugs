@@ -18,7 +18,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-[#191c1E] px-4 sm:px-6 md:px-10 lg:px-[117px] py-10">
+    <div className="bg-[#191c1E] px-4 sm:px-6 md:px-10 lg:px-[117px] py-10 z-30">
       <div className="flex flex-col lg:flex-row flex-wrap justify-between gap-12 lg:gap-4">
         {/* Logo + Text + Button */}
         <div className="flex flex-col gap-6 max-w-sm">
