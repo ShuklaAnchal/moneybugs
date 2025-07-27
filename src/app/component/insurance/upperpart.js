@@ -10,7 +10,7 @@ const InsuranceSection = ({
   imageSrc,
 }) => {
   return (
-    <div className="w-full bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl shadow-xl px-4 md:px-20 py-10">
+    <div className="w-full bg-insurancebackground rounded-3xl shadow-xl px-4 md:px-20 py-10">
       {/* Top Section */}
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-10">
         {/* Text Content */}

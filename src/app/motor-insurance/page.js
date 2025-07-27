@@ -120,7 +120,7 @@ const paragraphs = [
   onButtonClick={() => console.log("Redirect to Contact page")}
   />
 
-    <div className="w-full lg:h-[90vh] h-auto bg-primary flex lg:flex-row flex-col mt-12">
+    <div className="w-full lg:h-[90vh] h-auto flex lg:flex-row flex-col mt-12">
         <Leftcom
           subtitle="Why Choose Money Bugs"
           heading="Bhopal's Leading Motor Insurance Consultant"

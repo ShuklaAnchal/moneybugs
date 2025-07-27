@@ -5,6 +5,8 @@ import officeImage from "@/icons/about/office.jpg";
 import teamImage from "@/icons/about/diss.jpeg";
 import laptopImage from "@/icons/about/insu.jpg";
 import familyImage from "@/icons/about/family.jpg";
+import Leftcom from "@/app/component/homepage/opportunitycomponents.js/leftcom";
+import Rightcom from "@/app/component/homepage/opportunitycomponents.js/rightcom";
 
 const AboutUs = () => {
   return (
@@ -20,25 +22,35 @@ const AboutUs = () => {
       </div>
 
       {/* About & Vision Cards */}
-      <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-16 lg:py-10 md:py-8 py-0">
-        <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
-          <Image src={officeImage} alt="Office" fill className="object-cover" />
-          <div className="absolute bottom-0 left-0 right-0 h-28 bg-blue-600 text-white p-4">
-            <h3 className="font-bold text-lg">About Money Bugs</h3>
-            <p className="text-sm">
-              Money Bugs has 14+ years of experience in providing expert insurance solutions, offering seamless service, competitive pricing, and personalized guidance to ensure the best coverage for you.
-            </p>
-          </div>
-        </div>
-        <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
-          <Image src={teamImage} alt="Team" fill className="object-cover" />
-          <div className="absolute bottom-0 left-0 right-0 bg-blue-700 text-white p-4 h-28">
-            <h3 className="font-bold text-lg">Our Vision & Value</h3>
-            <p className="text-sm">
-              We believe in integrity, transparency, customer satisfaction, and innovation, ensuring sustainable solutions with expert guidance for every client.
-            </p>
-          </div>
-        </div>
+      {/* <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-16 lg:py-10 md:py-8 py-0"> */}
+   <div className="w-full lg:h-[80vh] h-auto flex lg:flex-row flex-col ">
+        <Leftcom
+          heading="About Money Bugs"
+          description="Money Bugs has 14 years of experience in providing expert insurance solutions, offering seamless service, competitive pricing, and personalized guidance to ensure the best coverage for you."
+          // buttonBgColor="bg-white"
+          // buttonHoverColor="hover:bg-secondary"
+          // buttonTextColor="hover:text-black"
+        />
+
+        <Rightcom
+          // cardData={cardItems}
+          backgroundImage={officeImage}
+          paddings={"p-14"}
+        />
+      </div>
+
+         <div className="w-full lg:h-[80vh] h-auto flex lg:flex-row flex-col ">
+
+              <Rightcom
+          // cardData={cardItems}
+          backgroundImage={officeImage}
+          paddings={"p-14"}
+        />
+        <Leftcom
+          subtitle="Why Choose Money Bugs"
+          heading="Bhopal's Leading Motor Insurance Consultant"
+          description="Choose Money Bugs for expert motor insurance solutions, seamless policy comparisons, and dedicated support. We deliver hassle-free services with personalized guidance and competitive pricing, ensuring your ride is covered and your journey is worry-free."
+        />
       </div>
 
       {/* How We Work */}

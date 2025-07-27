@@ -37,7 +37,7 @@ const SuccessSection = ({
         </div>
 
         {/* Stats */}
-<div className="relative pl-6 md:pl-10 w-[30%] ">
+<div className="relative pl-6 md:pl-10 w-full md:w-[40%]">
   {/* Vertical line */}
   <div className="absolute top-0 left-3.5 md:left-4 w-0.5 bg-gray-200 h-full"></div>
 

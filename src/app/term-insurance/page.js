@@ -108,7 +108,7 @@ const paragraphs = [
     subheading="Bhopal's Trusted Experts in Term Insurance Consulting"
     cards={cardData} />
   </div>
-      <div className="w-full lg:h-[90vh] h-auto bg-primary flex lg:flex-row flex-col mt-12">
+      <div className="w-full lg:h-[90vh] h-auto flex lg:flex-row flex-col mt-12">
         <Leftcom
           subtitle="Why Choose Money Bugs"
           heading="Bhopal's Leading Term Insurance Consultant Company"

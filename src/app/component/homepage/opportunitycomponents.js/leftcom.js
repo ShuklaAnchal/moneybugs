@@ -16,7 +16,7 @@ const LeftCom = ({
         {heading}
       </h1>
       <p className="text-sm sm:text-base text-textinsu max-w-xl">{description}</p>
-      <Discoverbtn onClick={onClick}  bgcolor="bg-[#65A69C]" />
+      <Discoverbtn onClick={onClick}  bgcolor="bg-[#65A69C]"  />
     </div>
   );
 };

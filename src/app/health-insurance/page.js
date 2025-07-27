@@ -101,7 +101,7 @@ const page = () => {
         quotes={quotes}
       />
 
-      <div className="w-full lg:h-[90vh] h-auto bg-primary flex lg:flex-row flex-col py-10 px-3">
+      <div className="w-full lg:h-[90vh] h-auto  flex lg:flex-row flex-col py-10 px-3">
         <Leftcom
           subtitle="Why Choose Money Bugs"
           heading="Bhopal's Leading Health Insurance Consultant"
