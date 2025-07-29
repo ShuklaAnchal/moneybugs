@@ -10,6 +10,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import Topuppernav from "@/app/component/topuppernavbar";
 import Logo from "@/icons/moneybugs-logo.png";
 import Social from "@/app/component/navbar.js/social";
+import Logo1 from "@/icons/footerlogo.png";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -144,7 +145,7 @@ const UpperNavbar = ({ showTop = false }) => {
           <div className="fixed top-0 left-0 h-full w-[85%] max-w-[300px] bg-black text-white shadow-lg p-4 overflow-y-auto transition-all duration-300 ease-in-out">
             <div className="flex justify-between items-center border-b border-white/20 pb-8 mt-3">
               <div className="w-[140px]">
-                <Image src={Logo} alt="Logo" />
+                <Image src={Logo1} alt="Logo" className="w-full h-24" />
               </div>
               <button onClick={handleCloseMenu} className="text-2xl text-white">
                 <FiX />

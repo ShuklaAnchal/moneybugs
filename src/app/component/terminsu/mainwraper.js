@@ -1,11 +1,5 @@
 "use client";
 import React from "react";
-
-import Uppernavbar from "@/app/component/uppernavbar";
-import Footer from "@/app/component/footer";
-import Uppepart from "@/app/component/reusablecomponents/upperpart";
-import WelcomeImage from "@/icons/main/welcome.jpg";
-import Health from "@/icons/term/term-insurance.jpg";
 import HeroSection from "@/app/component/reusablecomponents/maincard";
 
 import { MdSupportAgent } from "react-icons/md";
@@ -13,33 +7,35 @@ import { GrUserManager } from "react-icons/gr";
 import { FaHandHoldingHand } from "react-icons/fa6";
 import { TbHomeCog } from "react-icons/tb";
 import { FaUserShield, FaSmile, FaChartLine } from "react-icons/fa";
+import Featurecards from "@/app/component/reusablecomponents/featurecards";
+
 import SupportCard from "@/app/component/reusablecomponents/supportcard";
 import SuccessSection from "@/app/component/reusablecomponents/sucesssection";
 import ConfusionSection from "@/app/component/reusablecomponents/ConfusionSection";
 
-import imge1 from "@/icons/health/image-1.svg";
-import imge2 from "@/icons/health/image-2.svg";
-import imge3 from "@/icons/health/image-3.svg";
+import Img1 from "@/icons/health/image-1.svg";
+import Img2 from "@/icons/health/image-2.svg";
+import Img3 from "@/icons/health/image-3.svg";
 
 const mainwraper = () => {
-  const benefits = [
-    {
-      label: "Level Term Insurance",
-      icon: imge1,
-    },
-    {
-      label: "Increasing Term Insurance",
-      icon: imge2,
-    },
-    {
-      label: "Decreasing Term Insurance",
-      icon: imge3,
-    },
-  ];
+ 
 
-  const quotes = [
-    "Life is uncertain, but your family’s financial security doesn’t have to be.",
-    "Because true peace of mind comes from knowing your loved ones are protected, secure your life today",
+  const features = [
+    {
+      icon: Img1,
+      title: "Individual Health Insurance",
+      description: "Our fast and easy process ensures quick policy setup",
+    },
+    {
+      icon: Img2,
+      title: "Family Health Insurance",
+      description: "Get round-the-clock support for all your insurance needs",
+    },
+    {
+      icon: Img3,
+      title: "Senior Citizen Plan",
+      description: "Get round-the-clock support for all your insurance needs",
+    },
   ];
 
   const cardData = [
@@ -106,14 +102,10 @@ const mainwraper = () => {
         description="Choosing the right life insurance shouldn’t be complicated. We simplify the process-compare trusted providers, tailor your coverage, and secure your future in just a few easy steps."
       />
       <div className="flex flex-col bg-center relative">
-        <div className="mt-7">
-          <SupportCard
-            heading="How Money Bugs Operate"
-            subheading="Bhopal's Trusted Experts in Term Insurance Consulting"
-            cards={cardData}
-          />
+           <div className="mt-10">
+          <Featurecards features={features} />
         </div>
-        <div>
+        <div className="mt-10">
           <SuccessSection
             tagline="Your Path to Financial Security with Term Insurance"
             heading="Term Insurance: Redefining Success and Security"
@@ -122,7 +114,13 @@ const mainwraper = () => {
             buttonText="Contact Us"
             onButtonClick={() => console.log("Redirect to Contact mainwraper")}
           />
-
+     <div className="mt-7">
+          <SupportCard
+            heading="How Money Bugs Operate"
+            subheading="Bhopal's Trusted Experts in Term Insurance Consulting"
+            cards={cardData}
+          />
+        </div>
           <ConfusionSection
             title="Having Confusion In Mind Or Not Happy With Current Insurer"
             description="If you're unsure about your current policy or not satisfied with your insurer, we’re here to help! At Money Bugs, we provide expert consultation, transparent comparisons, and personalized solutions to ensure you get the best coverage at the right price."

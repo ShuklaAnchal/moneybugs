@@ -27,7 +27,7 @@ const ConfusionSection = ({
       {/* Foreground content */}
       <div className="relative z-10 w-full py-10 px-5 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-10 text-white">
         {/* Left Side */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 lg:text-start sm:text-start text-center">
           <h2 className="text-[24px] md:text-[32px] font-bold mb-4 leading-snug">
             {title}
           </h2>
