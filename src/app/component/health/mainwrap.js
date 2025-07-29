@@ -6,7 +6,6 @@ import { GrUserManager } from "react-icons/gr";
 import { FaHandHoldingHand } from "react-icons/fa6";
 import { TbHomeCog } from "react-icons/tb";
 import { FaUserShield, FaSmile, FaChartLine } from "react-icons/fa";
-import { FaStopwatch, FaHeadset } from "react-icons/fa";
 
 import SupportCard from "@/app/component/reusablecomponents/supportcard";
 import SuccessSection from "@/app/component/reusablecomponents/sucesssection";

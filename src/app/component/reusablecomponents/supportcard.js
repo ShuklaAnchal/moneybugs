@@ -10,7 +10,7 @@
       <div className="lg:container md:container mx-auto px-5 py-20 flex flex-col items-center">
           <h3 className="text-[20px] text-primary">{heading}</h3>
           <h1 className="text-[30px] font-semibold">{subheading}</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-content-center  gap-6 mt-10">
           {cards.map((item, index) => (
             <div
               key={index}

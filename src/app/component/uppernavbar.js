@@ -26,7 +26,7 @@ const navItems = [
       { label: "Child Saving Plan", href: "/child-saving-plan" },
     ],
   },
-  { label: "Blogs" },
+  { label: "Blogs" , href:"/blogs"},
   { label: "Contact Us", href: "/contactUs" },
 ];
 
