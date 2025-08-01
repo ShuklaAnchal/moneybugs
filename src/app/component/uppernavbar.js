@@ -83,7 +83,7 @@ const UpperNavbar = ({ showTop = false }) => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex text-[18px] gap-12 font-normal text-[#797979] relative">
+            <div className="hidden lg:flex text-[18px] gap-12 font-normal text-[#797979] relative h-[70%] mt-12">
               {navItems.map((item, index) => (
                 <div
                   key={index}

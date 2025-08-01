@@ -33,7 +33,7 @@ const HeroSection = ({
           style={{ height: contentHeight }}
         >
           {title && (
-            <h1 className="text-3xl font-bold mt-16">{title}</h1>
+            <h1 className="text-3xl font-extrabold mt-16">{title}</h1>
           )}
           {subtitle && (
             <p className="text-2xl font-medium mt-1 max-w-xl">{subtitle}</p>

@@ -121,7 +121,7 @@ to Get Started</h1>
 
           <button
             type='submit'
-            className='bgclo1 w-[50%] text-white py-4 mt-4 rounded-full font-semibold hover:bg-[#99FEAC] transition-all duration-300'
+            className='bgclo1 w-[50%] text-white py-4 mt-4 rounded-full font-semibold hover:bg-black transition-all duration-300'
           >
             GET A QUOTE NOW
           </button>

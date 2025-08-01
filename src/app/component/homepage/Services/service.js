@@ -4,11 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { FaCar, FaHeartbeat, FaNotesMedical , FaHandHoldingMedical, FaPlaneDeparture, FaBuilding, FaIndustry , FaUmbrellaBeach } from "react-icons/fa";
 import { RiFundsFill } from "react-icons/ri";
-
+import Link from "next/link";
 import Image from "next/image";
 import ServiceImage from "@/icons/companylogo/services-5-4.jpg";
 import Motar from "@/icons/main/car.jpg"
-import Traval from "@/icons/main/traval.jpg"
+import Traval from "@/icons/main/travel.jpg"
 import Life from "@/icons/main/life.webp";
 import Mutual from "@/icons/main/mutual-funds.webp";
 import Property from "@/icons/main/prpo.jpg";
@@ -23,6 +23,7 @@ const insuranceData = [
     icon: <FaHeartbeat />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
+    link:"/health-insurance"  
   },
   {
     title: "MOTOR INSURANCE",
@@ -30,6 +31,7 @@ const insuranceData = [
     icon: <FaCar />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
+    link:"/motor-insurance"
   },
   {
     title: "Term INSURANCE",
@@ -37,6 +39,7 @@ const insuranceData = [
     icon: <FaHandHoldingMedical />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
+    link:"/term-insurance"  
   },
   {
     title: "TRAVAL INSURANCE",
@@ -44,6 +47,7 @@ const insuranceData = [
     icon: <FaPlaneDeparture  />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
+       link:"/travel-insurance" 
   },
   {
     title: "MUTUAL FUND /SIP",
@@ -51,6 +55,7 @@ const insuranceData = [
     icon: <RiFundsFill />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
+       link:"/sip-and-mutual-fund" 
   },
   {
     title: "Child Saving Plan",
@@ -58,6 +63,7 @@ const insuranceData = [
     icon: <FaBuilding />,
     description:
       "There are many lipsum of passages of available but the have in that not some.",
+       link:"/child-saving-plan" 
   },
   // {
   //   title: "BUSSINESS INSURANCE",
@@ -90,6 +96,7 @@ const service = () => {
             </h2>
           </div>
           <div className="lg:px-[6rem] px-3 lg:mt-[90px] mt-[30px] lg:mb-0 mb-[20px] z-[50]">
+  
             <Swiper
               className="overflow-y-auto h-[400px] custom-swiper"
               modules={[Pagination, Autoplay, EffectCoverflow]}
@@ -104,6 +111,7 @@ const service = () => {
             >
               {insuranceData.map((item, index) => (
                 <SwiperSlide key={index}>
+                 <Link  href={item.link|| "#"}  passHref>
                   <div className="relative group rounded-[16px] rounded-[18px] shadow-lg cursor-pointer">
                     <Image
                       src={item.image}
@@ -128,9 +136,11 @@ const service = () => {
                       <p className="text-sm">{item.description}</p>
                     </div>
                   </div>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
+       
           </div>
         </div>
       </div>

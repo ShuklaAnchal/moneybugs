@@ -4,8 +4,6 @@ import React from "react";
 import Uppernavbar from "@/app/component/uppernavbar";
 import Footer from "@/app/component/footer";
 import Uppepart from "@/app/component/reusablecomponents/siptop";
-import WelcomeImage from "@/icons/main/welcome.jpg";
-import Health from "@/icons/health/health-insurance.jpg";
 import Leftcom from "@/app/component/homepage/opportunitycomponents.js/leftcom";
 import Rightcom from "@/app/component/homepage/opportunitycomponents.js/rightcom";
 import { MdSupportAgent } from "react-icons/md";
@@ -16,9 +14,10 @@ import { FaUserShield, FaSmile, FaChartLine } from "react-icons/fa";
 import SupportCard from "@/app/component/reusablecomponents/supportcard";
 import SuccessSection from "@/app/component/reusablecomponents/sucesssection";
 import ConfusionSection from "@/app/component/reusablecomponents/ConfusionSection";
+
+import TravalImage from "@/icons/traval/traval-insu.jpg";
+import Travalsecondimage from "@/icons/traval/travel-insu1.jpg";
 import HeroSection from "@/app/component/reusablecomponents/maincard";
-import Child from "@/icons/child/child.jpg";
-import Child1 from "@/icons/child/childinsu.jpg";
 import Featurecards from "@/app/component/reusablecomponents/featurecards";
 import Img1 from "@/icons/health/image-1.svg";
 import Img2 from "@/icons/health/image-2.svg";
@@ -66,7 +65,7 @@ const page = () => {
     },
   ];
 
-  const features = [
+   const features = [
     {
       icon: Img1,
       title: "Individual Health Insurance",
@@ -84,45 +83,54 @@ const page = () => {
     },
   ];
   const paragraphs = [
-    "Money Bugs offers expert financial guidance, customized saving plans, high returns with low risk, tax benefits, and complete transparency. We simplify the process, ensuring hassle-free investments tailored to your needs.",
-    "You invest a fixed amount regularly (monthly, quarterly, or annually) into the plan. The money grows over time, and at maturity, you receive a lump sum payout or periodic benefits based on the plan you choose. Some plans also offer insurance coverage in case of unforeseen circumstances.",
-    "Secure and systematic savings for your child’s future",
-    "Potential for high returns through guaranteed or market-linked plans",
-    "Tax benefits under Section 80C and 10(10D) of the Income Tax Act",
-    "Insurance protection in case of the policyholder’s demise",
-    "Flexible payout options to support higher education or other major expenses",
+    "Travel insurance provides financial protection against unexpected events like medical emergencies, trip cancellations, lost baggage, and travel delays, ensuring you travel with peace of mind.",
+    "Our plans cover medical expenses, emergency evacuations, trip cancellations, lost or stolen baggage, and travel assistance services.",
+    "You can purchase travel insurance anytime before departure. However, it’s recommended to buy early to maximize coverage benefit",
+    "You can request an extension before your policy expires, subject to approval and conditions.",
+    "To file a claim, contact our 24/7 assistance team, provide necessary documents, and follow our simple claims process for quick reimbursement.",
   ];
 
   return (
     <div className="h-auto w-full">
-      <HeroSection
-        title="Child Saving Plan"
+      <Uppernavbar />
+        <HeroSection
+        title="Travel Insurance"
         subtitle="Fly, Explore, Relax - We've Got You Covered"
         description="At Money Bugs, we understand that travel is all about experiencing new places, meeting new people, and creating unforgettable memories. But unexpected situations can arise, from flight cancellations to medical emergencies. That’s why we offer comprehensive travel insurance to ensure that you can explore the world with peace of mind."
       />
 
-      <div className="mt-10">
+        <div className="mt-10">
         <Featurecards features={features} />
       </div>
-      <div className="mt-7">
+      <div className="w-full lg:h-[90vh] h-auto text-textinsu flex lg:flex-row flex-col">
+        <Rightcom
+          // cardData={cardItems}
+          paddings={"p-20"}
+          backgroundImage={Travalsecondimage}
+        />
+        <Leftcom
+          subtitle="Why Choose Money Bugs"
+          heading="Travel Insurance - International Travel Plans"
+          description="Exploring new countries is exciting, but unexpected events can disrupt your journey. With Money Bugs International Travel Insurance, you can travel the world with confidence, knowing you’re covered against unforeseen expenses."
+          buttonBgColor="bg-btncolor"
+          buttonHoverColor="hover:bg-primary"
+          buttonTextColor="hover:text-white"
+        />
+      </div>
+      <div className="">
+        <SupportCard
+          subheading="Travel Insurance by MONEY BUGS"
+          cards={cardData}
+        />
+
         <SuccessSection
-          tagline="YOUR Child PATH TO SUCCESS"
-          heading="All About Your Child"
+          tagline="Why Traval Insurance"
+          heading="All About Travel Insurance"
           paragraphs={paragraphs}
           stats={stats}
           buttonText="Contact Us"
           onButtonClick={() => console.log("Redirect to Contact page")}
         />
-
-        <div className="w-full lg:h-[90vh] h-auto flex lg:flex-row flex-col">
-          <Rightcom backgroundImage={Child1} paddings={"p-6"} />
-          <Leftcom
-            subtitle="Child Savings Plan by MONEY BUGS"
-            heading="Why Choose Money Bugs"
-            description="Planning for your child’s future is one of the most important financial decisions you can make. Education, healthcare, and unforeseen expenses require substantial savings, making a well-structured child saving plan essential. At Money Bugs, we understand these concerns and offer customized solutions to ensure your child’s financial security. Here’s why choosing Money Bugs for your child saving plan is the best decision you can make."
-          />
-        </div>
-
         <ConfusionSection
           title="Having Confusion In Mind Or Not Happy With Current Insurer"
           description="If you're unsure about your current policy or not satisfied with your insurer, we’re here to help! At Money Bugs, we provide expert consultation, transparent comparisons, and personalized solutions to ensure you get the best coverage at the right price."
@@ -130,6 +138,7 @@ const page = () => {
           showForm={true}
         />
       </div>
+      <Footer />
     </div>
   );
 };
